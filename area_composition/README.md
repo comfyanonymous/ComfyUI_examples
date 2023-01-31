@@ -19,3 +19,7 @@ This image contain the same areas as the previous one but in reverse order.
 Adding a subject to the bottom center of the image by adding another area prompt.
 
 ![Example](night_evening_day_morning_subject.png)
+
+Here's a slightly different version.
+
+![Example](night_evening_day_morning_subject_2.png)
