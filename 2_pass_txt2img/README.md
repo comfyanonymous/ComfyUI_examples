@@ -14,4 +14,8 @@ Here is an image generated with this workflow:
 
 ![Example](sd1.5_latent_upscale.png)
 
+Here is an example of a more complex 2 pass workflow, This image is first generated with the Anything-V3.0 model, latent upscaled and then a second pass is done with AbyssOrangeMix2_hard:
 
+![Example](latent_upscale_different_prompt_model.png)
+
+![Example](latent_upscale_different_prompt_model_2.png)
