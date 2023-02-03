@@ -4,5 +4,7 @@ This [repo](https://github.com/comfyanonymous/ComfyUI_examples) contains example
 
 ["Hires Fix" aka 2 Pass Txt2Img](2_pass_txt2img)
 
+[Img2Img](img2img)
+
 [Area Composition](area_composition)
 
