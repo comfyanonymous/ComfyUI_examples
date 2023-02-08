@@ -32,3 +32,15 @@ This workflow uses Anything-V3, it is a 2 pass workflow with area composition us
 
 ![Example](square_area_for_subject.png)
 
+Adding a red haired subject with an area prompt at the right of the image.
+
+First pass output:
+
+![Example](square_area_for_2_subjects_first_pass.png)
+
+Second pass output:
+
+![Example](square_area_for_2_subjects.png)
+
+This second pass output image illustrates one of the behaviors of Stable Diffusion. The second pass has no area prompts. You'll notice that the hair of subject 1 is blonde with pinkish highlights and subject 2 has pinkish hair instead of red hair unlike what was present in the first pass output. This is because Stable Diffusion tries to make the overall image consistent with itself and one of the side effects of that is merging the hair colors together.
+
