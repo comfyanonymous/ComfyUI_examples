@@ -34,11 +34,11 @@ This workflow uses Anything-V3, it is a 2 pass workflow with area composition us
 
 Adding a red haired subject with an area prompt at the right of the image.
 
-First pass output:
+First pass output (1280x704):
 
 ![Example](square_area_for_2_subjects_first_pass.png)
 
-Second pass output:
+Second pass output (1920x1088):
 
 ![Example](square_area_for_2_subjects.png)
 
