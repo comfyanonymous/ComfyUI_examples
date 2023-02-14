@@ -8,3 +8,4 @@ This [repo](https://github.com/comfyanonymous/ComfyUI_examples) contains example
 
 [Area Composition](area_composition)
 
+[Noisy Latent Composition](noisy_latent_composition)
