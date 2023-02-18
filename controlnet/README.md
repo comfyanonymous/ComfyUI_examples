@@ -2,12 +2,25 @@
 
 ### Scribble ControlNet
 
-Here's a simple example of how to use controlnets, this example uses the scribble controlnet. You can load the next image in [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the full workflow.
+Here's a simple example of how to use controlnets, this example uses the scribble controlnet and the AnythingV3 model. You can load this image in [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the full workflow.
 
 
 ![Example](controlnet_example.png)
 
 Here is the input image I used for this workflow:
 
-![Example](input_scribble_example.png)
+<img src="input_scribble_example.png" width="256" />
+
+### Pose ControlNet
+
+This is the input image that will be used in this example:
+
+![Example](pose_worship.png)
+
+
+Here is an example using a first pass with AnythingV3 with the controlnet and a second pass without the controlnet with AOM3A3 (abyss orange mix 3) and using their VAE.
+
+![Example](2_pass_pose_worship.png)
+
+You can load this image in [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the full workflow.
 
