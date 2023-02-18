@@ -12,3 +12,4 @@ This [repo](https://github.com/comfyanonymous/ComfyUI_examples) contains example
 
 [Noisy Latent Composition](noisy_latent_composition)
 
+[ControlNets](controlnet)
