@@ -34,5 +34,5 @@ You can load this image in [ComfyUI](https://github.com/comfyanonymous/ComfyUI) 
 
 Input images:
 
-<img src="pose_present.png" width="256" />   <img src="house_scribble.png" width="256" />
+<img src="pose_present.png" width="256" /><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><img src="house_scribble.png" width="256" />
 
