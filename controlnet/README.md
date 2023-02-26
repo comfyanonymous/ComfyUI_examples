@@ -1,4 +1,5 @@
-# ControlNet Examples
+# ControlNet and T2I-Adapter Examples
+
 
 ### Scribble ControlNet
 
@@ -10,6 +11,28 @@ Here's a simple example of how to use controlnets, this example uses the scribbl
 Here is the input image I used for this workflow:
 
 <img src="input_scribble_example.png" width="256" />
+
+### T2I-Adapter vs ControlNets
+
+T2I-Adapters are much much more efficient than ControlNets so I highly recommend them. ControlNets will slow down generation speed by a significant amount while T2I-Adapters have almost zero negative impact on generation speed.
+
+In ControlNets the ControlNet model is run once every iteration. For the T2I-Adapter the model runs once in total.
+
+T2I-Adapters are used the same way as ControlNets in ComfyUI, the only thing that changes is that there is a T2IAdapterLoader node to load them.
+
+This is the input image that will be used in this example [source](https://commons.wikimedia.org/wiki/File:Stereogram_Tut_Shark_Depthmap.png):
+
+<img src="shark_depthmap.png" width="512" />
+
+Here is how you use the depth T2I-Adapter:
+
+![Example](depth_t2i_adapter.png)
+
+Here is how you use the depth Controlnet. Note that this example uses the DiffControlNetLoader node because the controlnet used is a diff control net. Diff controlnets need the weights of a model to be loaded correctly. The DiffControlNetLoader node can also be used to load regular controlnet models. When loading regular controlnet models it will behave the same as the ControlNetLoader node.
+
+![Example](depth_controlnet.png)
+
+You can load these images in [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the full workflow.
 
 ### Pose ControlNet
 
@@ -24,9 +47,10 @@ Here is an example using a first pass with AnythingV3 with the controlnet and a 
 
 You can load this image in [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the full workflow.
 
+
 ### Mixing ControlNets
 
-Multiple ControlNets can be applied like this with interesting results:
+Multiple ControlNets and T2I-Adapters can be applied like this with interesting results:
 
 ![Example](mixing_controlnets.png)
 
