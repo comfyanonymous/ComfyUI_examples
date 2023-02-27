@@ -21,3 +21,14 @@ It also works with non inpainting models. Here's an example with the anythingV3 
 
 ![Example](inpaint_anythingv3_woman.png)
 
+### Outpainting
+
+You can also use these exact workflows for outpainting, first expand the canvas of the image in your favorite image editor filling it with transparency like in this input image where I expanded the top and bottom:
+
+![Example](yosemite_outpaint_example.png)
+
+
+Using the v2 inpainting model the exact same way as the inpainting examples:
+
+![Example](inpain_model_outpainting.png)
+
