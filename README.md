@@ -14,6 +14,8 @@ Here are some more advanced examples:
 
 [Inpainting](inpaint)
 
+[Lora](lora)
+
 [Area Composition](area_composition)
 
 [Noisy Latent Composition](noisy_latent_composition)
