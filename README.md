@@ -16,6 +16,8 @@ Here are some more advanced examples:
 
 [Lora](lora)
 
+[Upscale Models (ESRGAN, etc..)](upscale_models)
+
 [Area Composition](area_composition)
 
 [Noisy Latent Composition](noisy_latent_composition)
