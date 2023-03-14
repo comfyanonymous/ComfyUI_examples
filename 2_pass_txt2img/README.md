@@ -12,7 +12,8 @@ Here's a simple workflow in ComfyUI to do this with basic latent upscaling:
 
 Here is an image generated with this workflow:
 
-![Example](sd1.5_latent_upscale.png)
+<img src="sd1.5_latent_upscale.png" width="512" />
+
 
 ## Non latent Upscaling
 
