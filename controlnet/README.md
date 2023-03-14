@@ -1,5 +1,9 @@
 # ControlNet and T2I-Adapter Examples
 
+Note that in these examples the raw image is passed to the ControlNet/T2I adapter without any preprocessing. When passing images directly to the controlnet it should be the type of image that the ControlNet expects to get the best results.
+
+If you are looking for nodes to preprocess your images you can find some: [Here](https://github.com/Fannovel16/comfy_controlnet_preprocessors)
+
 
 ### Scribble ControlNet
 
