@@ -16,6 +16,8 @@ Here are some more advanced examples:
 
 [Lora](lora)
 
+[Embeddings/Textual Inversion](textual_inversion_embeddings)
+
 [Upscale Models (ESRGAN, etc..)](upscale_models)
 
 [Area Composition](area_composition)
