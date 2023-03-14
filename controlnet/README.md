@@ -1,8 +1,10 @@
 # ControlNet and T2I-Adapter Examples
 
-Note that in these examples the raw image is passed to the ControlNet/T2I adapter without any preprocessing. When passing images directly to the controlnet it should be the type of image that the ControlNet expects to get the best results.
+Note that in these examples the raw image is passed directly to the ControlNet/T2I adapter.
 
-If you are looking for nodes to preprocess your images you can find some: [Here](https://github.com/Fannovel16/comfy_controlnet_preprocessors)
+Each ControlNet/T2I adapter needs the image that is passed to it to be in a specific format like depthmaps, canny maps and so on depending on the specific model if you want good results.
+
+The ControlNetApply node will not convert regular images into depthmaps, canny maps and so on for you. You will have to do that separately or using nodes to preprocess your images that you can find: [Here](https://github.com/Fannovel16/comfy_controlnet_preprocessors)
 
 
 ### Scribble ControlNet
