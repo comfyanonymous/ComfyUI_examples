@@ -24,7 +24,7 @@ T2I-Adapters are much much more efficient than ControlNets so I highly recommend
 
 In ControlNets the ControlNet model is run once every iteration. For the T2I-Adapter the model runs once in total.
 
-T2I-Adapters are used the same way as ControlNets in ComfyUI, the only thing that changes is that there is a T2IAdapterLoader node to load them.
+T2I-Adapters are used the same way as ControlNets in ComfyUI: using the ControlNetLoader node.
 
 This is the input image that will be used in this example [source](https://commons.wikimedia.org/wiki/File:Stereogram_Tut_Shark_Depthmap.png):
 
