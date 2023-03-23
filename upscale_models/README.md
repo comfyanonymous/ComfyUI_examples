@@ -7,3 +7,5 @@ Here is an example:
 ![Example](esrgan_example.png)
 
 You can load this image in [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the workflow.
+
+If you are looking for upscale models to use you can find some on [The Upscale Wiki](https://upscale.wiki/wiki/Main_Page)

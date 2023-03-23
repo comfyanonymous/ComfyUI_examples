@@ -1,5 +1,7 @@
 # Inpaint Examples
 
+![Example](inpaint_example.png)
+
 In this example we will be using this image. Download it and place it in your input folder.
 
 ![Example](yosemite_inpaint_example.png)
