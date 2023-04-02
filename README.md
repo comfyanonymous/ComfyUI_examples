@@ -28,7 +28,7 @@ Here are some more advanced examples:
 
 
 
-
+#### You might also want to check out the: [Frequently Asked Questions](faq)
 
 
 #### Other Sources of Examples:
