@@ -14,6 +14,9 @@ Note that you can omit the filename extension so these two are equivalent:
 
 Embeddings are basically custom words so where you put them in the text prompt matters.
 
+You can also set the strength of the embedding just like regular words in the prompt:
+
+```(embedding:SDA768:1.2)```
 
 For example if you had an embedding of a cat:
 
