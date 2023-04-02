@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-### Why do I get different images from the a1111 UI even when I use the same seed?
+## Why do I get different images from the a1111 UI even when I use the same seed?
 
 In ComfyUI the noise is generated on the CPU. Generating noise on the CPU gives ComfyUI the advantage that seeds will be much more reproducible across different hardware configurations but also means they will generate completely different noise than UIs like a1111 that generate the noise on the GPU. Generating noise on the GPU vs CPU does not affect performance in any way.
 
@@ -17,7 +17,7 @@ In ComfyUI the strengths are not averaged out like this so it will use the stren
 There are also many other differences but these two are the ones that have most impact.
 
 
-### Why do I get incoherent images with some checkpoints that are less than 1.9GB?
+## Why do I get incoherent images with some checkpoints that are less than 1.9GB?
 
 Some rare checkpoints like ProtoGen_X3.4 don't come with CLIP weights. The CLIPLoader node in ComfyUI can be used to load CLIP model weights like [these SD1.5 ones](https://huggingface.co/runwayml/stable-diffusion-v1-5/blob/main/text_encoder/model.safetensors).
 
