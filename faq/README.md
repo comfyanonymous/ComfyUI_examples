@@ -17,3 +17,7 @@ In ComfyUI the strengths are not averaged out like this so it will use the stren
 There are also many other differences but these two are the ones that have most impact.
 
 
+### Why do I get incoherent images with some checkpoints that are less than 1.9GB?
+
+Some rare checkpoints like ProtoGen_X3.4 don't come with CLIP weights. The CLIPLoader node in ComfyUI can be used to load CLIP model weights like [these SD1.5 ones](https://huggingface.co/runwayml/stable-diffusion-v1-5/blob/main/text_encoder/model.safetensors).
+
