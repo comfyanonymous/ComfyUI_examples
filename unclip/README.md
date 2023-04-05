@@ -4,11 +4,13 @@ unCLIP models are versions of SD models that are specially tuned to receive imag
 
 It basically lets you use images in your prompt.
 
-Here is how you use it in ComfyUI (you can drag this into ComfyUI to get the workflow):
+Here is how you use it in ComfyUI (you can drag this into [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the workflow):
 
 ![Example](unclip_example.png)
 
-noise_augmentation controls how closely the model will try to follow the image concept while strength is how strong it is actually applied.
+noise_augmentation controls how closely the model will try to follow the image concept. The lower the value the more it will follow the concept.
+
+strength is how strongly it will influence the image.
 
 Multiple images can be used like this:
 
@@ -23,3 +25,9 @@ Input images:
 You can find the official unCLIP checkpoints [here](https://huggingface.co/stabilityai/stable-diffusion-2-1-unclip/tree/main)
 
 You can find some unCLIP checkpoints I made from some existing 768-v checkpoints with some clever merging [here (based on WD1.5 beta 2)](https://huggingface.co/comfyanonymous/wd-1.5-beta2_unCLIP/tree/main) and [here (based on illuminati Diffusion)](https://huggingface.co/comfyanonymous/illuminatiDiffusionV1_v11_unCLIP/tree/main)
+
+### More advanced Workflows
+
+A good way of using unCLIP checkpoints is to use them for the first pass of a 2 pass workflow and then switch to a 1.x model for the second pass. This is how the following image was generated. (you can load it into [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the workflow):
+
+![Example](unclip_2pass.png)
