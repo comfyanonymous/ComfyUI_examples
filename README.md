@@ -33,5 +33,7 @@ Here are some more advanced examples:
 
 #### Other Sources of Examples:
 
+https://github.com/wyrde/wyrde-comfyui-workflows
+
 https://github.com/atlasunified/Templates-ComfyUI-
 
