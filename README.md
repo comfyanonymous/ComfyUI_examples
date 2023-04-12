@@ -31,9 +31,10 @@ Here are some more advanced examples:
 #### You might also want to check out the: [Frequently Asked Questions](faq)
 
 
-#### Other Sources of Examples:
+#### Other Sources of Examples/Information:
 
-https://github.com/wyrde/wyrde-comfyui-workflows
+[https://github.com/wyrde/wyrde-comfyui-workflows](https://github.com/wyrde/wyrde-comfyui-workflows)
 
-https://github.com/atlasunified/Templates-ComfyUI-
+[https://github.com/atlasunified/Templates-ComfyUI-](https://github.com/atlasunified/Templates-ComfyUI-)
+
 
