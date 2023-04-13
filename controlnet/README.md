@@ -6,6 +6,7 @@ Each ControlNet/T2I adapter needs the image that is passed to it to be in a spec
 
 The ControlNetApply node will not convert regular images into depthmaps, canny maps and so on for you. You will have to do that separately or using nodes to preprocess your images that you can find: [Here](https://github.com/Fannovel16/comfy_controlnet_preprocessors)
 
+You can find the latest controlnet model files here: [Original version](https://huggingface.co/lllyasviel/ControlNet-v1-1/tree/main) or [smaller fp16 safetensors version](https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/tree/main)
 
 ### Scribble ControlNet
 
