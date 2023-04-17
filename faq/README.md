@@ -21,3 +21,9 @@ There are also many other differences but these two are the ones that have most 
 
 Some rare checkpoints like ProtoGen_X3.4 don't come with CLIP weights. The CLIPLoader node in ComfyUI can be used to load CLIP model weights like [these SD1.5 ones](https://huggingface.co/runwayml/stable-diffusion-v1-5/blob/main/text_encoder/model.safetensors).
 
+
+## What is the difference between strength_model and strength_clip in the "Load LoRA" node?
+
+These separate values control the strength that the LoRA is applied separately to the CLIP model and the main MODEL. In most UIs adjusting the LoRA strength is only one number and setting the lora strength to 0.8 for example is the same as setting both strength_model and strength_clip to 0.8.
+
+The reason you can tune both in ComfyUI is because the CLIP and MODEL/UNET part of the LoRA will most likely have learned different concepts so tweaking them separately can give you better images.
