@@ -26,6 +26,8 @@ Here are some more advanced examples:
 
 [ControlNets and T2I-Adapter](controlnet)
 
+[GLIGEN](gligen)
+
 [unCLIP](unclip)
 
 #### You might also want to check out the: [Frequently Asked Questions](faq)
@@ -38,3 +40,4 @@ Here are some more advanced examples:
 [https://github.com/atlasunified/Templates-ComfyUI-](https://github.com/atlasunified/Templates-ComfyUI-)
 
 
+#### [Custom nodes, extensions and other ComfyUI related things](custom)
