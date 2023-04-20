@@ -39,5 +39,3 @@ Here are some more advanced examples:
 
 [https://github.com/atlasunified/Templates-ComfyUI-](https://github.com/atlasunified/Templates-ComfyUI-)
 
-
-#### [Custom nodes, extensions and other ComfyUI related things](custom)
