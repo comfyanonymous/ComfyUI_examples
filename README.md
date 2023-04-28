@@ -35,9 +35,21 @@ Here are some more advanced examples:
 #### You might also want to check out the: [Frequently Asked Questions](faq)
 
 
-#### Other Sources of Examples/Information:
+## Other Sources of Examples/Information:
 
-[https://github.com/wyrde/wyrde-comfyui-workflows](https://github.com/wyrde/wyrde-comfyui-workflows)
+#### Workflows and other General Information:
+
+Highly Recommended -> [https://github.com/wyrde/wyrde-comfyui-workflows](https://github.com/wyrde/wyrde-comfyui-workflows)
 
 [https://github.com/atlasunified/Templates-ComfyUI-](https://github.com/atlasunified/Templates-ComfyUI-)
+
+#### Lists of Custom Nodes/extensions:
+
+ComfyUI is extensible and many people have written some great custom nodes for it.
+
+Note that I am not responsible if one of these breaks your workflows, your ComfyUI install or anything else.
+
+Here are some places where you can find some:
+
+[https://github.com/WASasquatch/comfyui-plugins](https://github.com/WASasquatch/comfyui-plugins)
 
