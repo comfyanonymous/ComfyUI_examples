@@ -14,7 +14,7 @@ html, body {
 <br>
 <input type="file" accept=".latent" onchange="previewLatent(this.files[0]);"></input>
 <br>
-<img id="display_image" style="width: 100%;"></img>
+<img id="display_image" style="width: 100%;image-rendering: pixelated;"></img>
 This page decodes the file entirely in the browser in only a few lines of javascript and calculates a low quality preview from the latent image data using a simple matrix multiplication.
 <br>
 
