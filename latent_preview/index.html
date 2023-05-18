@@ -5,15 +5,21 @@ html, body {
   height: 100%;
 }
 </style>
-
 <head>
 <title>Drag .latent files to preview them</title>
 </head>
 <body>
 
+<h3>Drag a .latent file on this page or select it with the input below to preview it.</h3>
+<br>
+<input type="file" onchange="previewLatent(this.files[0]);"></input>
+<br>
 <img id="display_image" style="width: 100%;"></img>
+This page decodes the file entirely in the browser in only a few lines of javascript and calculates a low quality preview from the latent image data using a simple matrix multiplication.
+<br>
 
 <script>
+// This code is released under the 0BSD license which is a public-domain-equivalent license so feel free to do whatever you want with it.
 function getLatentImage(file) {
 	return new Promise((r) => {
 		const reader = new FileReader();
@@ -30,7 +36,6 @@ function getLatentImage(file) {
 			let height = header.latent_tensor.shape[2];
 			let width = header.latent_tensor.shape[3];
 
-			// var canvas = document.getElementById("display_image");
 			var canvas = document.createElement('canvas');
 			canvas.height = height;
 			canvas.width = width;
@@ -57,32 +62,29 @@ function getLatentImage(file) {
 	});
 }
 
+function previewLatent(file) {
+	getLatentImage(file).then((image) => document.getElementById('display_image').src = image);
+}
+
 document.addEventListener("drop", async (event) => {
     event.preventDefault();
     event.stopPropagation();
-    let image = await getLatentImage(event.dataTransfer.files[0]);
-    document.getElementById("display_image").src = image;
+    previewLatent(event.dataTransfer.files[0]);
 });
 
 document.addEventListener("dragover", async (event) => {
-    // console.log("dropped", event);
     event.preventDefault();
     event.stopPropagation();
-    // let image = await getLatentImage(event.dataTransfer.files[0]);
 });
 
 document.addEventListener("dragleave", async (event) => {
-    // console.log("dropped", event);
     event.preventDefault();
     event.stopPropagation();
-    // let image = await getLatentImage(event.dataTransfer.files[0]);
 });
 
 document.addEventListener("dragenter", async (event) => {
-    // console.log("dropped", event);
     event.preventDefault();
     event.stopPropagation();
-    // let image = await getLatentImage(event.dataTransfer.files[0]);
 });
 
 </script>
