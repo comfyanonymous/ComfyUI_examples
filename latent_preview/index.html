@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<style>
+html, body {
+  height: 100%;
+}
+</style>
+
+<head>
+<title>Drag .latent files to preview them</title>
+</head>
+<body>
+
+<img id="display_image" style="width: 100%;"></img>
+
+<script>
+function getLatentImage(file) {
+	return new Promise((r) => {
+		const reader = new FileReader();
+		reader.onload = (event) => {
+			const safetensorsData = new Uint8Array(event.target.result);
+			const dataView = new DataView(safetensorsData.buffer);
+			let header_size = dataView.getUint32(0, true);
+			let offset = 8;
+			let header = JSON.parse(String.fromCharCode(...safetensorsData.slice(offset, offset + header_size)));
+
+			let start_offset = header.latent_tensor.data_offsets[0] + header_size + 8;
+			let end_offset = header.latent_tensor.data_offsets[1] + header_size + 8;
+			let dtype = header.latent_tensor.dtype; //F32 or F16?
+			let height = header.latent_tensor.shape[2];
+			let width = header.latent_tensor.shape[3];
+
+			// var canvas = document.getElementById("display_image");
+			var canvas = document.createElement('canvas');
+			canvas.height = height;
+			canvas.width = width;
+			var ctxEdited = canvas.getContext('2d');
+			const arr = new Uint8ClampedArray(height * width * 4);
+
+			for (let i = 0; i < height * width; ++i) {
+				let v1 = dataView.getFloat32(start_offset + 4*i, true);
+				let v2 = dataView.getFloat32(start_offset + 4*i + 4*height*width, true);
+				let v3 = dataView.getFloat32(start_offset + 4*i + 4*height*width*2, true);
+				let v4 = dataView.getFloat32(start_offset + 4*i + 4*height*width*3, true);
+				arr[i* 4 ] = (0.298 * v1 + 0.187 * v2 - 0.158 * v3 - 0.184 *v4 + 1.0) * 127.5;
+				arr[i* 4 + 1] = (0.207 * v1 + 0.286 * v2 + 0.189 * v3 - 0.271 *v4 + 1.0) * 127.5;
+				arr[i* 4 + 2] = (0.208 * v1 + 0.173 * v2 + 0.264 * v3 - 0.473 *v4 + 1.0) * 127.5;
+				arr[i* 4 + 3] = 255;
+			}
+			let imageData = new ImageData(arr, width);
+			ctxEdited.putImageData(imageData, 0, 0);
+
+			r(canvas.toDataURL());
+		};
+
+		reader.readAsArrayBuffer(file);
+	});
+}
+
+document.addEventListener("drop", async (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    let image = await getLatentImage(event.dataTransfer.files[0]);
+    document.getElementById("display_image").src = image;
+});
+
+document.addEventListener("dragover", async (event) => {
+    // console.log("dropped", event);
+    event.preventDefault();
+    event.stopPropagation();
+    // let image = await getLatentImage(event.dataTransfer.files[0]);
+});
+
+document.addEventListener("dragleave", async (event) => {
+    // console.log("dropped", event);
+    event.preventDefault();
+    event.stopPropagation();
+    // let image = await getLatentImage(event.dataTransfer.files[0]);
+});
+
+document.addEventListener("dragenter", async (event) => {
+    // console.log("dropped", event);
+    event.preventDefault();
+    event.stopPropagation();
+    // let image = await getLatentImage(event.dataTransfer.files[0]);
+});
+
+</script>
+
+</body>
+</html>
