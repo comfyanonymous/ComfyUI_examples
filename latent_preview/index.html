@@ -14,12 +14,25 @@ html, body {
 <br>
 <input type="file" accept=".latent" onchange="previewLatent(this.files[0]);"></input>
 <br>
-<img id="display_image" style="width: 100%;image-rendering: pixelated;"></img>
+<div id="display_image"></div>
 This page decodes the file entirely in the browser in only a few lines of javascript and calculates a low quality preview from the latent image data using a simple matrix multiplication.
 <br>
 
 <script>
 // This code is released under the 0BSD license which is a public-domain-equivalent license so feel free to do whatever you want with it.
+function getFloat16(uint16) {
+	var sign = 1 - (2 * (uint16 >> 15));
+	var exponent = ((uint16 >> 10) & 0x1f) - 15;
+	var fraction = uint16 & 0x3ff;
+
+	//Doesn't handle inf and nan but I don't think we care about those values
+	if (exponent === -15) {
+		return sign * fraction * Math.pow(2, -24);
+	}
+
+	return sign * (1 + fraction / 1024.0) * Math.pow(2, exponent);
+}
+
 function getLatentImage(file) {
 	return new Promise((r) => {
 		const reader = new FileReader();
@@ -33,29 +46,47 @@ function getLatentImage(file) {
 			let start_offset = header.latent_tensor.data_offsets[0] + header_size + 8;
 			let end_offset = header.latent_tensor.data_offsets[1] + header_size + 8;
 			let dtype = header.latent_tensor.dtype; //F32 or F16?
+			let batch = header.latent_tensor.shape[0];
 			let height = header.latent_tensor.shape[2];
 			let width = header.latent_tensor.shape[3];
 
-			var canvas = document.createElement('canvas');
-			canvas.height = height;
-			canvas.width = width;
-			var ctxEdited = canvas.getContext('2d');
-			const arr = new Uint8ClampedArray(height * width * 4);
 
-			for (let i = 0; i < height * width; ++i) {
-				let v1 = dataView.getFloat32(start_offset + 4*i, true);
-				let v2 = dataView.getFloat32(start_offset + 4*i + 4*height*width, true);
-				let v3 = dataView.getFloat32(start_offset + 4*i + 4*height*width*2, true);
-				let v4 = dataView.getFloat32(start_offset + 4*i + 4*height*width*3, true);
-				arr[i* 4 ] = (0.298 * v1 + 0.187 * v2 - 0.158 * v3 - 0.184 *v4 + 1.0) * 127.5;
-				arr[i* 4 + 1] = (0.207 * v1 + 0.286 * v2 + 0.189 * v3 - 0.271 *v4 + 1.0) * 127.5;
-				arr[i* 4 + 2] = (0.208 * v1 + 0.173 * v2 + 0.264 * v3 - 0.473 *v4 + 1.0) * 127.5;
-				arr[i* 4 + 3] = 255;
+			let data_func, data_size;
+			if (dtype === "F32") {
+				data_func = function(dataView, offset) {return dataView.getFloat32(offset, true);}
+				data_size = 4;
+			} else if (dtype === "F16") {
+				data_func = function(dataView, offset) {return getFloat16(dataView.getUint16(offset, true));}
+				data_size = 2;
 			}
-			let imageData = new ImageData(arr, width);
-			ctxEdited.putImageData(imageData, 0, 0);
 
-			r(canvas.toDataURL());
+			// Convert batch of latent images into list of DataURL images
+			let output = [];
+			for (let b = 0; b < batch; ++b) {
+				const arr = new Uint8ClampedArray(height * width * 4);
+				let batch_offset = start_offset + data_size*height*width*4*b;
+
+				for (let i = 0; i < height * width; ++i) {
+					let v1 = data_func(dataView, batch_offset + data_size*i, true);
+					let v2 = data_func(dataView, batch_offset + data_size*i + data_size*height*width, true);
+					let v3 = data_func(dataView, batch_offset + data_size*i + data_size*height*width*2, true);
+					let v4 = data_func(dataView, batch_offset + data_size*i + data_size*height*width*3, true);
+					arr[i* 4 ] = (0.298 * v1 + 0.187 * v2 - 0.158 * v3 - 0.184 *v4 + 1.0) * 127.5;
+					arr[i* 4 + 1] = (0.207 * v1 + 0.286 * v2 + 0.189 * v3 - 0.271 *v4 + 1.0) * 127.5;
+					arr[i* 4 + 2] = (0.208 * v1 + 0.173 * v2 + 0.264 * v3 - 0.473 *v4 + 1.0) * 127.5;
+					arr[i* 4 + 3] = 255;
+				}
+
+				// Convert to DataURL image
+				let imageData = new ImageData(arr, width);
+				let canvas = document.createElement('canvas');
+				canvas.height = height;
+				canvas.width = width;
+				let ctxEdited = canvas.getContext('2d');
+				ctxEdited.putImageData(imageData, 0, 0);
+				output.push({data: canvas.toDataURL(), width:width, height:height});
+			}
+			r(output);
 		};
 
 		reader.readAsArrayBuffer(file);
@@ -63,7 +94,19 @@ function getLatentImage(file) {
 }
 
 function previewLatent(file) {
-	getLatentImage(file).then((image) => document.getElementById('display_image').src = image);
+	getLatentImage(file).then((images) => {
+		let displayer = document.getElementById('display_image');
+		displayer.innerHTML = '';
+		for (let i = 0; i < images.length; ++i) {
+			let image_element = document.createElement('img');
+			image_element.style.width = "100%";
+			image_element.style.maxWidth = images[i].width * 8 + "px";
+			image_element.style.imageRendering = "pixelated";
+			image_element.style.margin = "8px";
+			image_element.src = images[i].data;
+			displayer.appendChild(image_element);
+		}
+	});
 }
 
 document.addEventListener("drop", async (event) => {
