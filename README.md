@@ -32,8 +32,11 @@ Here are some more advanced examples:
 
 [unCLIP](unclip)
 
+#### The [Node Guide (WIP)](https://blenderneko.github.io/ComfyUI-docs/) documents what each node does.
+
 #### You might also want to check out the: [Frequently Asked Questions](faq)
 
+The [ComfyUI Blog](https://comfyanonymous.github.io/ComfyUI_Blog/) is also a source of various information.
 
 ## Other Sources of Examples/Information:
 
@@ -53,3 +56,4 @@ Here are some places where you can find some:
 
 [https://github.com/WASasquatch/comfyui-plugins](https://github.com/WASasquatch/comfyui-plugins)
 
+[This blog post if you scroll down a bit](https://comfyanonymous.github.io/ComfyUI_Blog/comfyui/update/2023/05/18/ComfyUi-is-4-months-old.html)

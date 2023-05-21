@@ -67,10 +67,10 @@ function getLatentImage(file) {
 				let batch_offset = start_offset + data_size*height*width*4*b;
 
 				for (let i = 0; i < height * width; ++i) {
-					let v1 = data_func(dataView, batch_offset + data_size*i, true);
-					let v2 = data_func(dataView, batch_offset + data_size*i + data_size*height*width, true);
-					let v3 = data_func(dataView, batch_offset + data_size*i + data_size*height*width*2, true);
-					let v4 = data_func(dataView, batch_offset + data_size*i + data_size*height*width*3, true);
+					let v1 = data_func(dataView, batch_offset + data_size*i);
+					let v2 = data_func(dataView, batch_offset + data_size*i + data_size*height*width);
+					let v3 = data_func(dataView, batch_offset + data_size*i + data_size*height*width*2);
+					let v4 = data_func(dataView, batch_offset + data_size*i + data_size*height*width*3);
 					arr[i* 4 ] = (0.298 * v1 + 0.187 * v2 - 0.158 * v3 - 0.184 *v4 + 1.0) * 127.5;
 					arr[i* 4 + 1] = (0.207 * v1 + 0.286 * v2 + 0.189 * v3 - 0.271 *v4 + 1.0) * 127.5;
 					arr[i* 4 + 2] = (0.208 * v1 + 0.173 * v2 + 0.264 * v3 - 0.473 *v4 + 1.0) * 127.5;
