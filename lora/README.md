@@ -1,6 +1,6 @@
 # Lora Examples
 
-These are examples demonstrating how to use Loras.
+These are examples demonstrating how to use Loras. All LoRA flavours: Lycoris, loha, lokr, locon, etc... are used this way.
 
 You can Load these images in [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the full workflow.
 
