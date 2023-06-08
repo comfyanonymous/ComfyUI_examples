@@ -11,8 +11,3 @@ Input images should be put in the input folder.
 This is what a simple img2img workflow looks like, it is the same as the default txt2img workflow but the denoise is set to 0.87 and a loaded image is passed to the sampler instead of an empty image.
 
 ![Example](img2img_workflow.png)
-
-This is an example of an output from this exact workflow:
-
-![Example](img2img.png)
-
