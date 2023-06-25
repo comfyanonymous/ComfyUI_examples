@@ -10,11 +10,6 @@ Here's a simple workflow in ComfyUI to do this with basic latent upscaling:
 
 ![Example](hiresfix_latent_workflow.png)
 
-Here is an image generated with this workflow:
-
-<img src="sd1.5_latent_upscale.png" width="512" />
-
-
 ## Non latent Upscaling
 
 Here is an example of how the [esrgan upscaler](../upscale_models) can be used for the upscaling step. Since ESRGAN operates in pixel space the image must be converted to pixel space and back to latent space after being upscaled.
@@ -24,9 +19,8 @@ Here is an example of how the [esrgan upscaler](../upscale_models) can be used f
 
 ## More Examples
 
-Here is an example of a more complex 2 pass workflow, This image is first generated with the Anything-V3.0 model, latent upscaled and then a second pass is done with AbyssOrangeMix2_hard:
+Here is an example of a more complex 2 pass workflow, This image is first generated with the WD1.5 beta 3 illusion model, latent upscaled and then a second pass is done with cardosAnime_v10:
 
 ![Example](latent_upscale_different_prompt_model.png)
 
-![Example](latent_upscale_different_prompt_model_2.png)
 
