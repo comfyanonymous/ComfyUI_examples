@@ -32,6 +32,8 @@ Here are some more advanced examples:
 
 [unCLIP](unclip)
 
+[Model Merging](model_merging)
+
 #### The [Node Guide (WIP)](https://blenderneko.github.io/ComfyUI-docs/) documents what each node does.
 
 #### You might also want to check out the: [Frequently Asked Questions](faq)
