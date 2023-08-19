@@ -14,7 +14,7 @@ You can also give the base and refiners different prompts like on this workflow.
 
 ### ReVision
 
-ReVision is very similar to [unCLIP](../unclip) but behaves on a more conceptual level. You can pass one or more images to it and it will
+ReVision is very similar to [unCLIP](../unclip) but behaves on a more conceptual level. You can pass one or more images to it and it will take concepts from the images and will create new images using them as inspiration.
 
 First download [CLIP-G Vision](https://huggingface.co/comfyanonymous/clip_vision_g/blob/main/clip_vision_g.safetensors) and put in in your ComfyUI/models/clip_vision/ directory.
 
