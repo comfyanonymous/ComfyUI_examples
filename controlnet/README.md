@@ -8,6 +8,10 @@ The ControlNetApply node will not convert regular images into depthmaps, canny m
 
 You can find the latest controlnet model files here: [Original version](https://huggingface.co/lllyasviel/ControlNet-v1-1/tree/main) or [smaller fp16 safetensors version](https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/tree/main)
 
+For SDXL stability.ai has released Control Loras that you can find [Here (rank 256)](https://huggingface.co/stabilityai/control-lora/tree/main/control-LoRAs-rank256) or [Here (rank 128)](https://huggingface.co/stabilityai/control-lora/tree/main/control-LoRAs-rank128). They are used exactly the same way (put them in the same directory) as the regular ControlNet model files.
+
+ControlNet model files go in the ComfyUI/models/controlnet directory.
+
 ### Scribble ControlNet
 
 Here's a simple example of how to use controlnets, this example uses the scribble controlnet and the AnythingV3 model. You can load this image in [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the full workflow.
