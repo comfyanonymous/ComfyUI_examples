@@ -20,5 +20,9 @@ Since Loras are a patch on the model weights they can also be merged into the mo
 
 ![Example](model_merging_lora.png)
 
+You can also subtract models weights and add them like in this example used to create an inpaint model from a non inpaint model with the formula: `(inpaint_model - base_model) * 1.0 + other_model`
+If you are familiar with the "Add Difference" option in other UIs this is how to do it in ComfyUI.
+
+![Example](model_merging_inpaint.png)
 
 One important thing you should note is that models are merged and saved in the precision that is used for inference on your hardware so usually it will be 16 bit float. If you want do do merges in 32 bit float launch ComfyUI with: --force-fp32
