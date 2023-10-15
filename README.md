@@ -48,6 +48,8 @@ The [ComfyUI Blog](https://comfyanonymous.github.io/ComfyUI_Blog/) is also a sou
 
 Highly Recommended -> [https://github.com/wyrde/wyrde-comfyui-workflows](https://github.com/wyrde/wyrde-comfyui-workflows)
 
+Explore page for 1000s of ComfyUI workflows -> [https://comfyworkflows.com/](https://comfyworkflows.com/)
+
 [https://github.com/atlasunified/Templates-ComfyUI-](https://github.com/atlasunified/Templates-ComfyUI-)
 
 #### Custom Nodes/extensions:
