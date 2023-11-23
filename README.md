@@ -36,6 +36,8 @@ Here are some more advanced examples:
 
 [Model Merging](model_merging)
 
+[LCM](lcm)
+
 #### The [Node Guide (WIP)](https://blenderneko.github.io/ComfyUI-docs/) documents what each node does.
 
 You might also want to check out the: [Frequently Asked Questions](faq)
@@ -46,9 +48,9 @@ The [ComfyUI Blog](https://comfyanonymous.github.io/ComfyUI_Blog/) is also a sou
 
 #### Workflows and other General Information:
 
-Highly Recommended -> [https://github.com/wyrde/wyrde-comfyui-workflows](https://github.com/wyrde/wyrde-comfyui-workflows)
+[https://github.com/wyrde/wyrde-comfyui-workflows](https://github.com/wyrde/wyrde-comfyui-workflows)
 
-Explore page for 1000s of ComfyUI workflows -> [https://comfyworkflows.com/](https://comfyworkflows.com/)
+Third party website for uploading and sharing workflows: [https://comfyworkflows.com/](https://comfyworkflows.com/)
 
 [https://github.com/atlasunified/Templates-ComfyUI-](https://github.com/atlasunified/Templates-ComfyUI-)
 
