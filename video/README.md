@@ -28,4 +28,4 @@ fps: The higher the fps the less choppy the video will be.
 
 augmentation level: The amount of noise added to the init image, the higher it is the less the video will look like the init image. Increase it for more motion.
 
-VideoLinearCFGGuidance: This node improves sampling for these video models a bit, what it does is linearly scale the cfg across the different frames. In the above example the first frame will be cfg 2.5 (the cfg set in the sampler) the middle frame 1.75 and the last frame 1.0 (the min_cfg in the node).
+VideoLinearCFGGuidance: This node improves sampling for these video models a bit, what it does is linearly scale the cfg across the different frames. In the above example the first frame will be cfg 1.0 (the min_cfg in the node) the middle frame 1.75 and the last frame 2.5. (the cfg set in the sampler). This way frames further away from the init frame get a gradually higher cfg.
