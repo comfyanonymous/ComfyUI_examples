@@ -9,12 +9,14 @@ The most basic way of using the image to video model is by giving it an init ima
 You can download this webp animated image and load it or drag it on [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the workflow.
 
 ![Example](image_to_video.webp)
+[Workflow in Json format](workflow_image_to_video.json)
 
 If you want the exact input image you can find it on the [unCLIP example page](../unclip)
 
 You can also use them like in this workflow that uses SDXL to generate an initial image that is then passed to the 25 frame model:
 
 ![Example](txt_to_image_to_video.webp)
+[Workflow in Json format](workflow_txt_to_img_to_video.json)
 
 #### Some explanations for the parameters:
 
