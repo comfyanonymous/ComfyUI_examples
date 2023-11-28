@@ -38,6 +38,8 @@ Here are some more advanced examples:
 
 [LCM](lcm)
 
+[SDXL Turbo](sdturbo)
+
 [Video Models](video)
 
 #### The [Node Guide (WIP)](https://blenderneko.github.io/ComfyUI-docs/) documents what each node does.

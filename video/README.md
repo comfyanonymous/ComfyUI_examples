@@ -5,7 +5,7 @@
 As of writing this there are two image to video checkpoints. Here are the official checkpoints for [the one tuned to generate 14 frame videos](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid/blob/main/svd.safetensors) and [the one for 25 frame videos](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/blob/main/svd_xt.safetensors). Put them in the ComfyUI/models/checkpoints folder.
 
 
-The most basic way of using the image to video model is by giving it an init image like in the folowing workflow that uses the 14 frame model.
+The most basic way of using the image to video model is by giving it an init image like in the following workflow that uses the 14 frame model.
 You can download this webp animated image and load it or drag it on [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the workflow.
 
 ![Example](image_to_video.webp)
