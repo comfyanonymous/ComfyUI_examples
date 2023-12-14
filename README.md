@@ -54,7 +54,9 @@ The [ComfyUI Blog](https://comfyanonymous.github.io/ComfyUI_Blog/) is also a sou
 
 [https://github.com/wyrde/wyrde-comfyui-workflows](https://github.com/wyrde/wyrde-comfyui-workflows)
 
-Third party website for uploading and sharing workflows: [https://comfyworkflows.com/](https://comfyworkflows.com/)
+Third party website for uploading and sharing workflows
+- [OpenArt AI](https://openart.ai/workflows/)
+- [https://comfyworkflows.com/](https://comfyworkflows.com/)
 
 [https://github.com/atlasunified/Templates-ComfyUI-](https://github.com/atlasunified/Templates-ComfyUI-)
 
