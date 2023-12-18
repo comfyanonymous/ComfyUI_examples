@@ -10,6 +10,6 @@ You can download this image and load it or drag it on [ComfyUI](https://github.c
 
 ![Example](stable_zero123_example.png)
 
-The input image can be found [here](/hypernetworks/hypernetwork_example_output.png), it is the output image from the [hypernetworks](/hypernetworks) example.
+The input image can be found [here](../hypernetworks/hypernetwork_example_output.png), it is the output image from the [hypernetworks](../hypernetworks) example.
 
 Elevation and asimuth are in degrees and control the rotation of the object.
