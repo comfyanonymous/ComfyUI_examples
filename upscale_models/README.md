@@ -8,4 +8,4 @@ Here is an example:
 
 You can load this image in [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the workflow.
 
-If you are looking for upscale models to use you can find some on [The Upscale Wiki](https://upscale.wiki/wiki/Model_Database)
+If you are looking for upscale models to use you can find some on [OpenModelDB](https://openmodeldb.info/)
