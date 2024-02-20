@@ -10,24 +10,24 @@ Note that you can download all images in this page and then drag or load them on
 
 Here is a basic text to image workflow:
 
-![Example](stable_cascade_text_to_image.png)
+![Example](stable_cascade__text_to_image.png)
 
 
 ## Image to Image
 
 Here's an example of how to do basic image to image by encoding the image and passing it to Stage C.
 
-![Example](stable_cascade_image_to_image.png)
+![Example](stable_cascade__image_to_image.png)
 
 ## Image Variations
 
 Stable Cascade supports creating variations of images using the output of CLIP vision. See the following workflow for an example:
 
-![Example](stable_cascade_image_remixing.png)
+![Example](stable_cascade__image_remixing.png)
 
 See this next workflow for how to mix multiple images together:
 
-![Example](stable_cascade_image_remixing_multiple.png)
+![Example](stable_cascade__image_remixing_multiple.png)
 
 You can find the input image for the above workflows on the [unCLIP example page](../unclip)
 
