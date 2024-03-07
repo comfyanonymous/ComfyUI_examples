@@ -31,3 +31,17 @@ See this next workflow for how to mix multiple images together:
 
 You can find the input image for the above workflows on the [unCLIP example page](../unclip)
 
+
+## ControlNet
+
+You can download the stable cascade controlnets from: [here](https://huggingface.co/stabilityai/stable-cascade/tree/main/controlnet). For these examples I have renamed the files by adding stable_cascade_ in front of the filename for example: [stable_cascade_canny.safetensors](https://huggingface.co/stabilityai/stable-cascade/blob/main/controlnet/canny.safetensors), [stable_cascade_inpainting.safetensors](https://huggingface.co/stabilityai/stable-cascade/blob/main/controlnet/inpainting.safetensors)
+
+Here is an example for how to use the Canny Controlnet:
+
+![Example](stable_cascade__canny_controlnet.png)
+
+
+Here is an example for how to use the Inpaint Controlnet, the example input image can be found [here](../inpaint/yosemite_inpaint_example.png). A reminder that you can right click images in the LoadImage node and edit them with the mask editor.
+
+![Example](stable_cascade__inpaint_controlnet.png)
+
