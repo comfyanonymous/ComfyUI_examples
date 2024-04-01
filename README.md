@@ -46,7 +46,12 @@ Here are some more advanced examples:
 
 [Video Models](video)
 
-#### The [Node Guide (WIP)](https://blenderneko.github.io/ComfyUI-docs/) documents what each node does.
+
+## Documentation
+
+#### [WIP LLM Assisted Documentation](https://docs.getsalt.ai/md/) of every node
+
+The old [Node Guide (WIP)](https://blenderneko.github.io/ComfyUI-docs/) documents what most nodes do.
 
 You might also want to check out the: [Frequently Asked Questions](faq)
 
