@@ -44,6 +44,8 @@ Here are some more advanced examples:
 
 [Stable Cascade](stable_cascade)
 
+[Edit/InstructPix2Pix Models](edit_models)
+
 [Video Models](video)
 
 
