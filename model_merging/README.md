@@ -26,3 +26,14 @@ If you are familiar with the "Add Difference" option in other UIs this is how to
 ![Example](model_merging_inpaint.png)
 
 One important thing you should note is that models are merged and saved in the precision that is used for inference on your hardware so usually it will be 16 bit float. If you want do do merges in 32 bit float launch ComfyUI with: --force-fp32
+
+
+### Advanced Merging
+
+#### CosXL
+
+Here is an example of how to create a CosXL model from a regular SDXL model with merging. The requirements are the [CosXL base model](https://huggingface.co/stabilityai/cosxl), the [SDXL base model](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/blob/main/sd_xl_base_1.0_0.9vae.safetensors) and the SDXL model you want to convert. In this example I used [albedobase-xl](https://civitai.com/models/140737/albedobase-xl).
+
+![Example](model_merging_cosxl.png)
+
+
