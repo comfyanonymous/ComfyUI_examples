@@ -63,6 +63,8 @@ The [ComfyUI Blog](https://comfyanonymous.github.io/ComfyUI_Blog/) is also a sou
 
 #### Workflows and other General Information:
 
+[https://github.com/Yuan-ManX/ComfyUI-Tools-Roadmap](https://github.com/Yuan-ManX/ComfyUI-Tools-Roadmap) 
+
 [https://github.com/wyrde/wyrde-comfyui-workflows](https://github.com/wyrde/wyrde-comfyui-workflows)
 
 Third party websites for uploading and sharing workflows:
