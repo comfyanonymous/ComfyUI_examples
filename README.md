@@ -83,4 +83,6 @@ Here are some places where you can find some:
 
 [https://github.com/WASasquatch/comfyui-plugins](https://github.com/WASasquatch/comfyui-plugins)
 
+[https://github.com/Yuan-ManX/ComfyUI-Tools-Roadmap](https://github.com/Yuan-ManX/ComfyUI-Tools-Roadmap) 
+
 [This blog post if you scroll down a bit](https://comfyanonymous.github.io/ComfyUI_Blog/comfyui/update/2023/05/18/ComfyUi-is-4-months-old.html)
