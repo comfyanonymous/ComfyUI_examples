@@ -68,6 +68,7 @@ The [ComfyUI Blog](https://comfyanonymous.github.io/ComfyUI_Blog/) is also a sou
 Third party websites for uploading and sharing workflows:
 - [OpenArt AI](https://openart.ai/workflows/)
 - [https://comfyworkflows.com/](https://comfyworkflows.com/)
+- [Civitai](https://civitai.com/)
 
 [https://github.com/atlasunified/Templates-ComfyUI-](https://github.com/atlasunified/Templates-ComfyUI-)
 
