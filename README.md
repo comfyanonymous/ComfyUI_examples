@@ -34,6 +34,8 @@ Here are some more advanced examples:
 
 [SDXL](sdxl)
 
+[SD3](sd3)
+
 [Model Merging](model_merging)
 
 [3d](3d)
