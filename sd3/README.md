@@ -14,3 +14,8 @@ Here is a basic example how to use it:
 
 As a reminder you can save these image files and drag or load them into ComfyUI to get the workflow.
 
+
+SD3 performs very well with the negative conditioning zeroed out like in the following example:
+
+![Example](sd3_anime_example.png)
+
