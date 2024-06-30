@@ -50,6 +50,8 @@ Here are some more advanced examples:
 
 [Video Models](video)
 
+[Audio Models](audio)
+
 
 ## Documentation
 
