@@ -55,6 +55,8 @@ Here are some more advanced examples:
 
 ## Documentation
 
+#### [WIP Documentation](https://docs.comfy.org/)
+
 #### [WIP LLM Assisted Documentation](https://docs.getsalt.ai/md/) of every node
 
 The old [Node Guide (WIP)](https://blenderneko.github.io/ComfyUI-docs/) documents what most nodes do.
