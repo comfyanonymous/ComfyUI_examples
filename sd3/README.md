@@ -14,8 +14,11 @@ Here is a basic example how to use it:
 
 As a reminder you can save these image files and drag or load them into ComfyUI to get the workflow.
 
-
 SD3 performs very well with the negative conditioning zeroed out like in the following example:
 
 ![Example](sd3_anime_example.png)
 
+SD3 Controlnets by [InstantX](https://huggingface.co/InstantX) are also supported. Download the canny controlnet model [here](https://huggingface.co/InstantX/SD3-Controlnet-Canny/blob/main/diffusion_pytorch_model.safetensors), and put it in your ComfyUI/models/controlnet directory. Be sure to rename it to something clear like sd3_controlnet_canny.safetensors.
+
+Here is an example of how to use it:
+![Example](sd3_controlnet_example.png)
