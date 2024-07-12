@@ -46,6 +46,8 @@ Here are some more advanced examples:
 
 [Stable Cascade](stable_cascade)
 
+[AuraFlow](aura_flow)
+
 [Edit/InstructPix2Pix Models](edit_models)
 
 [Video Models](video)
