@@ -18,6 +18,8 @@ SD3 performs very well with the negative conditioning zeroed out like in the fol
 
 ![Example](sd3_anime_example.png)
 
+### SD3 Controlnet
+
 SD3 Controlnets by [InstantX](https://huggingface.co/InstantX) are also supported. Download the canny controlnet model [here](https://huggingface.co/InstantX/SD3-Controlnet-Canny/blob/main/diffusion_pytorch_model.safetensors), and put it in your ComfyUI/models/controlnet directory. Be sure to rename it to something clear like sd3_controlnet_canny.safetensors.
 
 Here is an example of how to use it:
