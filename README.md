@@ -48,6 +48,8 @@ Here are some more advanced examples:
 
 [AuraFlow](aura_flow)
 
+[HunyuanDiT](hunyuan_dit)
+
 [Edit/InstructPix2Pix Models](edit_models)
 
 [Video Models](video)
