@@ -6,6 +6,10 @@ If you don't have t5xxl_fp16.safetensors or clip_l.safetensors already in your C
 
 The VAE can be found [here](https://huggingface.co/black-forest-labs/FLUX.1-schnell/blob/main/ae.sft) and should go in your ComfyUI/models/vae/ folder.
 
+#### Tips if you are running out of memory:
+
+You can set the weight_dtype in the "Load Diffusion Model" node to fp8 which will lower the memory usage by half but might reduce quality a tiny bit.
+
 ## Flux Dev
 
 You can find the Flux Dev diffusion model weights [here](https://huggingface.co/black-forest-labs/FLUX.1-dev). Put the flux1-dev.sft file in your: ComfyUI/models/unet/ folder.
