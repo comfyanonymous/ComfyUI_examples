@@ -50,6 +50,8 @@ Here are some more advanced examples:
 
 [HunyuanDiT](hunyuan_dit)
 
+[Flux](flux)
+
 [Edit/InstructPix2Pix Models](edit_models)
 
 [Video Models](video)
