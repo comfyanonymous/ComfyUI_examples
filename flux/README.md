@@ -4,13 +4,13 @@ Flux is a family of diffusion models by [black forest labs](https://blackforestl
 
 For the easy to use single file version see below: [FP8 Checkpoint Version](#simple-to-use-fp8-checkpoint-version)
 
-#### Files to download for the regular version
+### Files to download for the regular version
 
 If you don't have t5xxl_fp16.safetensors or clip_l.safetensors already in your ComfyUI/models/clip/ directory you can find them on: [this link.](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main) You can use t5xxl_fp8_e4m3fn.safetensors instead for lower memory usage but the fp16 one is recommended if you have more than 32GB ram.
 
 The VAE can be found [here](https://huggingface.co/black-forest-labs/FLUX.1-schnell/blob/main/ae.sft) and should go in your ComfyUI/models/vae/ folder.
 
-#### Tips if you are running out of memory:
+### Tips if you are running out of memory:
 
 Use the single file version that you can find by looking [Below](#simple-to-use-fp8-checkpoint-version)
 
