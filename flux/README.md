@@ -12,7 +12,7 @@ The VAE can be found [here](https://huggingface.co/black-forest-labs/FLUX.1-schn
 
 ### Tips if you are running out of memory:
 
-Use the single file version that you can find by looking [Below](#simple-to-use-fp8-checkpoint-version)
+Use the single file fp8 version that you can find by looking [Below](#simple-to-use-fp8-checkpoint-version)
 
 You can set the weight_dtype in the "Load Diffusion Model" node to fp8 which will lower the memory usage by half but might reduce quality a tiny bit. You can also download the example.
 
