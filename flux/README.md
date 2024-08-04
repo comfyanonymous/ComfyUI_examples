@@ -28,7 +28,9 @@ You can then load or drag the following image in ComfyUI to get the workflow:
 
 You can find an easy to use checkpoint for the Flux dev [here](https://huggingface.co/Comfy-Org/flux1-dev/blob/main/flux1-dev-fp8.safetensors) that you can put in your: ComfyUI/models/checkpoints/ directory.
 
-Note that fp8 degrades the quality a bit so if you have the resources the full version above is recommended.
+This file can be loaded with the regular "Load Checkpoint" node. Make sure you set CFG to 1.0 when using it.
+
+Note that fp8 degrades the quality a bit so if you have the resources the official full 16 bit version is recommended.
 
 You can then load or drag the following image in ComfyUI to get the workflow:
 
