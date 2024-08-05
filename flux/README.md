@@ -2,7 +2,9 @@
 
 Flux is a family of diffusion models by [black forest labs](https://blackforestlabs.ai/announcing-black-forest-labs/)
 
-For the easy to use single file version see below: [FP8 Checkpoint Version](#simple-to-use-fp8-checkpoint-version)
+For the easy to use single file versions see below: [FP8 Checkpoint Version](#simple-to-use-fp8-checkpoint-version)
+
+## Regular Full Version
 
 ### Files to download for the regular version
 
@@ -16,7 +18,7 @@ Use the single file fp8 version that you can find by looking [Below](#simple-to-
 
 You can set the weight_dtype in the "Load Diffusion Model" node to fp8 which will lower the memory usage by half but might reduce quality a tiny bit. You can also download the example.
 
-## Flux Dev
+### Flux Dev
 
 You can find the Flux Dev diffusion model weights [here](https://huggingface.co/black-forest-labs/FLUX.1-dev). Put the flux1-dev.sft file in your: ComfyUI/models/unet/ folder.
 
@@ -24,7 +26,21 @@ You can then load or drag the following image in ComfyUI to get the workflow:
 
 ![Example](flux_dev_example.png)
 
-### Simple to use FP8 Checkpoint version
+### Flux Schnell
+
+Flux Schnell is a distilled 4 step model.
+
+You can find the Flux Schnell diffusion model weights [here](https://huggingface.co/black-forest-labs/FLUX.1-schnell/blob/main/flux1-schnell.sft) this file should go in your: ComfyUI/models/unet/ folder.
+
+
+You can then load or drag the following image in ComfyUI to get the workflow:
+
+![Example](flux_schnell_example.png)
+
+
+## Simple to use FP8 Checkpoint version
+
+### Flux Dev
 
 You can find an easy to use checkpoint for the Flux dev [here](https://huggingface.co/Comfy-Org/flux1-dev/blob/main/flux1-dev-fp8.safetensors) that you can put in your: ComfyUI/models/checkpoints/ directory.
 
@@ -36,14 +52,10 @@ You can then load or drag the following image in ComfyUI to get the workflow:
 
 ![Example](flux_dev_checkpoint_example.png)
 
+### Flux Schnell
 
-## Flux Schnell
-
-Flux Schnell is a distilled 4 step model.
-
-You can find the Flux Schnell diffusion model weights [here](https://huggingface.co/black-forest-labs/FLUX.1-schnell/blob/main/flux1-schnell.sft) this file should go in your: ComfyUI/models/unet/ folder.
-
+For Flux schnell you can get the checkpoint [here](https://huggingface.co/Comfy-Org/flux1-schnell/blob/main/flux1-schnell-fp8.safetensors) that you can put in your: ComfyUI/models/checkpoints/ directory.
 
 You can then load or drag the following image in ComfyUI to get the workflow:
 
-![Example](flux_schnell_example.png)
+![Example](flux_schnell_checkpoint_example.png)
