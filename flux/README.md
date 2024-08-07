@@ -2,7 +2,7 @@
 
 Flux is a family of diffusion models by [black forest labs](https://blackforestlabs.ai/announcing-black-forest-labs/)
 
-For the easy to use single file versions see below: [FP8 Checkpoint Version](#simple-to-use-fp8-checkpoint-version)
+For the easy to use single file versions that you can easily use in [ComfyUI](https://github.com/comfyanonymous/ComfyUI) see below: [FP8 Checkpoint Version](#simple-to-use-fp8-checkpoint-version)
 
 ## Regular Full Version
 
