@@ -67,10 +67,10 @@ XLab and InstantX + Shakker Labs have released Controlnets for Flux. You can fin
 
 The XLab controlnets can be found here [here](https://huggingface.co/XLabs-AI/flux-controlnet-collections).
 
-You can put these files under `ComfyUI/models/controlnet` directory.
+Put these files under `ComfyUI/models/controlnet` directory.
 
 Try an example Canny Controlnet workflow by dragging in this image into ComfyUI.
 
 ![Example](flux_controlnet_example.png)
 
-If you need an example input image for the canny, try [this](mulan.png).
+If you need an example input image for the canny, use [this](mulan.png).
