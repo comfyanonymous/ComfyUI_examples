@@ -59,3 +59,18 @@ For Flux schnell you can get the checkpoint [here](https://huggingface.co/Comfy-
 You can then load or drag the following image in ComfyUI to get the workflow:
 
 ![Example](flux_schnell_checkpoint_example.png)
+
+
+### Flux Controlnets
+
+XLab and InstantX + Shakker Labs have released Controlnets for Flux. You can find the InstantX Canny model file [here](https://huggingface.co/InstantX/FLUX.1-dev-Controlnet-Canny/resolve/main/diffusion_pytorch_model.safetensors), the Depth controlnet [here](https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Depth/resolve/main/diffusion_pytorch_model.safetensors) and the Union Controlnet [here](https://huggingface.co/Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro/resolve/main/diffusion_pytorch_model.safetensors). 
+
+The XLab controlnets can be found here [here](https://huggingface.co/XLabs-AI/flux-controlnet-collections).
+
+You can put these files under `ComfyUI/models/controlnet` directory.
+
+Try an example Canny Controlnet workflow by dragging in this image into ComfyUI.
+
+![Example](flux_controlnet_example.png)
+
+If you need an example input image for the canny, try [this](mulan.png).
