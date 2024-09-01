@@ -73,4 +73,4 @@ Try an example Canny Controlnet workflow by dragging in this image into ComfyUI.
 
 ![Example](flux_controlnet_example.png)
 
-If you need an example input image for the canny, use [this](mulan.png). Put it under `ComfyUI/input`
+If you need an example input image for the canny, use [this](girl_in_field.png). Put it under `ComfyUI/input`
