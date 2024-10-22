@@ -21,6 +21,7 @@ As a reminder you can save these image files and drag or load them into ComfyUI 
 
 <details>
 <summary>Old SD3 medium examples</summary>
+
 The SD3 checkpoints that contain text encoders: [sd3_medium_incl_clips.safetensors (5.5GB)](https://huggingface.co/stabilityai/stable-diffusion-3-medium/tree/main) and [sd3_medium_incl_clips_t5xxlfp8.safetensors (10.1GB)](https://huggingface.co/stabilityai/stable-diffusion-3-medium/tree/main) can be used like any regular checkpoint in ComfyUI. The difference between both these checkpoints is that the first contains only 2 text encoders: CLIP-L and CLIP-G while the other one contains 3: CLIP-L, CLIP-G and T5XXL. Make sure to put either sd3_medium_incl_clips.safetensors or sd3_medium_incl_clips_t5xxlfp8.safetensors in your ComfyUI/models/checkpoints/ directory.
 
 Here is a very basic example how to use it:
