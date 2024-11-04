@@ -54,7 +54,9 @@ Here are some more advanced examples:
 
 [Edit/InstructPix2Pix Models](edit_models)
 
-[Video Models](video)
+[Stable Video Diffusion](video)
+
+[Mochi](mochi)
 
 [Audio Models](audio)
 
