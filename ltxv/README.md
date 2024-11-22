@@ -11,6 +11,7 @@ If you don't have it already downloaded you can download the [t5xxl_fp16.safeten
 ### Text to Video
 
 ![Example](ltxv_text_to_video.webp)
+
 [Workflow in Json format](ltxv_text_to_video.json)
 
 You can download this webp animated image and load it or drag it on [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the workflow.
@@ -23,6 +24,7 @@ You can download this webp animated image and load it or drag it on [ComfyUI](ht
 Workflow:
 
 ![Example](ltxv_image_to_video.webp)
+
 [Workflow in Json format](ltxv_image_to_video.json)
 
 You can download this webp animated image and load it or drag it on [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the workflow.
