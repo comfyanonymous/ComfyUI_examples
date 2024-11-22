@@ -58,6 +58,8 @@ Here are some more advanced examples:
 
 [Mochi](mochi)
 
+[Lightricks LTX-Video](ltxv)
+
 [Audio Models](audio)
 
 
