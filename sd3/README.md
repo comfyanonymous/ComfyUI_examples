@@ -20,6 +20,14 @@ See this workflow for an example.
 
 As a reminder you can save these image files and drag or load them into ComfyUI to get the workflow.
 
+### SD3.5 Controlnets
+
+Stability has released some official SD3.5 controlnets that you can find [here](https://huggingface.co/stabilityai/stable-diffusion-3.5-controlnets) these files (sd3.5_large_controlnet_canny.safetensors, sd3.5_large_controlnet_depth.safetensors, sd3.5_large_controlnet_blur.safetensors) go in your ComfyUI/models/controlnet directory and are meant to be used with SD3.5 large.
+
+See this workflow for an example with the canny ([sd3.5_large_controlnet_canny.safetensors](https://huggingface.co/stabilityai/stable-diffusion-3.5-controlnets/tree/main)) controlnet:
+
+![Example](sd3.5_large_canny_controlnet_example.png)
+
 
 [Old SD3 medium examples](README_old.md)
 
