@@ -60,6 +60,8 @@ Here are some more advanced examples:
 
 [Lightricks LTX-Video](ltxv)
 
+[Hunyuan Video](hunyuan_video)
+
 [Audio Models](audio)
 
 
