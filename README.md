@@ -64,6 +64,7 @@ Here are some more advanced examples:
 
 [Stable Audio](stable_audio)
 
+[TangoFlux](tangoflux)
 
 ## Documentation
 
