@@ -62,7 +62,7 @@ Here are some more advanced examples:
 
 [Hunyuan Video](hunyuan_video)
 
-[Audio Models](audio)
+[Stable Audio](stable_audio)
 
 
 ## Documentation

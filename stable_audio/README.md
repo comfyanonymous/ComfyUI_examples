@@ -1,6 +1,4 @@
-# Audio Examples
-
-## Stable Audio Open 1.0
+# Stable Audio Open 1.0 Examples
 
 Download the [model.safetensors from this page](https://huggingface.co/google-t5/t5-base/blob/main/model.safetensors) and save it as `t5_base.safetensors` to your ComfyUI/models/clip/ directory.
 
