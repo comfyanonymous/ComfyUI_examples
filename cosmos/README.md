@@ -39,6 +39,8 @@ This workflow requires the 7B text to video model that you can download above.
 
 ### Image to Video
 
+This model supports generating a video from 1 or more images. If more than one image is fed it will use them all as a guide and continue the motion. You can also do basic interpolation by setting one or more start_image and end_image which works best if those images are similar to each other.
+
 This workflow requires the 7B image to video model that you can download above.
 
 This model is trained primarily on realistic videos but in this example you can see that it also works decently on anime.

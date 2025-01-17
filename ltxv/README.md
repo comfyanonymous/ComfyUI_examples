@@ -4,7 +4,7 @@
 
 The important thing with this model is to give it long descriptive prompts.
 
-Download the [ltx-video-2b-v0.9.safetensors](https://huggingface.co/Lightricks/LTX-Video/blob/main/ltx-video-2b-v0.9.safetensors) file and put it in your ComfyUI/models/checkpoints folder.
+Download the [ltx-video-2b-v0.9.1.safetensors](https://huggingface.co/Lightricks/LTX-Video/blob/main/ltx-video-2b-v0.9.1.safetensors) or old [ltx-video-2b-v0.9.safetensors](https://huggingface.co/Lightricks/LTX-Video/blob/main/ltx-video-2b-v0.9.safetensors) file and put it in your ComfyUI/models/checkpoints folder.
 
 If you don't have it already downloaded you can download the [t5xxl_fp16.safetensors](https://huggingface.co/Comfy-Org/mochi_preview_repackaged/blob/main/split_files/text_encoders/t5xxl_fp16.safetensors) file and put it in your ComfyUI/models/text_encoders/ folder.
 
