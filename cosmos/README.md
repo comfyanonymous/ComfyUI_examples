@@ -39,3 +39,10 @@ This workflow requires the 7B text to video model that you can download above.
 
 ### Image to Video
 
+This workflow requires the 7B image to video model that you can download above.
+
+This model is trained primarily on realistic videos but in this example you can see that it also works decently on anime.
+
+![Example](image_to_video_cosmos_7B.webp)
+
+[Workflow in Json format](image_to_video_cosmos_7B.json)
