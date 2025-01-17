@@ -62,6 +62,8 @@ Here are some more advanced examples:
 
 [Hunyuan Video](hunyuan_video)
 
+[Nvidia Cosmos](cosmos)
+
 [Audio Models](audio)
 
 
