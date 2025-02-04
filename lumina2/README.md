@@ -4,9 +4,9 @@
 
 ## Basic Workflow
 
-Download [lumina_2.safetensors](https://huggingface.co/Comfy-Org/Lumina_Image_2.0_Repackaged/blob/main/all_in_one/lumina_2.safetensors) and put it in your ComfyUI/checkpoints directory.
+Download [lumina_2.safetensors](https://huggingface.co/Comfy-Org/Lumina_Image_2.0_Repackaged/blob/main/all_in_one/lumina_2.safetensors) and put it in your ComfyUI/models/checkpoints directory.
 
-You can then load up the following image in ComfyUI to get the workflow:
+You can then load up or drag the following image in ComfyUI to get the workflow:
 
 ![Example](lumina2_basic_example.png)
 
