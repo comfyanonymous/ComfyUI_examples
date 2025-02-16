@@ -8,7 +8,7 @@ For the easy to use single file versions that you can easily use in [ComfyUI](ht
 
 ### Files to download for the regular version
 
-If you don't have t5xxl_fp16.safetensors or clip_l.safetensors already in your ComfyUI/models/clip/ directory you can find them on: [this link.](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main) You can use t5xxl_fp8_e4m3fn.safetensors instead for lower memory usage but the fp16 one is recommended if you have more than 32GB ram.
+If you don't have t5xxl_fp16.safetensors or clip_l.safetensors already in your ComfyUI/models/text_encoders/ directory you can find them on: [this link.](https://huggingface.co/comfyanonymous/flux_text_encoders/tree/main) You can use t5xxl_fp8_e4m3fn.safetensors instead for lower memory usage but the fp16 one is recommended if you have more than 32GB ram.
 
 The VAE can be found [here](https://huggingface.co/black-forest-labs/FLUX.1-schnell/blob/main/ae.safetensors) and should go in your ComfyUI/models/vae/ folder.
 

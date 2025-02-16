@@ -6,7 +6,7 @@ Here is a very basic example how to use it:
 
 ![Example](sd3_simple_example.png)
 
-The [sd3_medium.safetensors](https://huggingface.co/stabilityai/stable-diffusion-3-medium/tree/main) file does not contain text encoder/CLIP weights so you must load them separately to use that file. Download the text encoder weights from the [text_encoders directory](https://huggingface.co/stabilityai/stable-diffusion-3-medium/tree/main) and put them in your ComfyUI/models/clip/ directory. sd3_medium.safetensors should be put in your ComfyUI/models/checkpoints/ directory.
+The [sd3_medium.safetensors](https://huggingface.co/stabilityai/stable-diffusion-3-medium/tree/main) file does not contain text encoder/CLIP weights so you must load them separately to use that file. Download the text encoder weights from the [text_encoders directory](https://huggingface.co/stabilityai/stable-diffusion-3-medium/tree/main) and put them in your ComfyUI/models/text_encoders/ directory. sd3_medium.safetensors should be put in your ComfyUI/models/checkpoints/ directory.
 
 Here is a basic example how to use it:
 
