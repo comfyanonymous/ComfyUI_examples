@@ -36,7 +36,7 @@ This workflow requires the [wan2.1_t2v_1.3B_bf16.safetensors](https://huggingfac
 This workflow requires the [wan2.1_i2v_480p_14B_bf16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/blob/main/split_files/diffusion_models/wan2.1_i2v_480p_14B_bf16.safetensors) file (put it in: ComfyUI/models/diffusion_models/) and 
 [clip_vision_h.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/blob/main/split_files/clip_vision/clip_vision_h.safetensors) which goes in: ComfyUI/models/clip_vision/
 
-Note that to keep this example accessible it only generates 33 frames at 512x512, the model can do more than that.
+Note this example only generates 33 frames at 512x512 because I wanted it to be accessible, the model can do more than that. The 720p model is pretty good if you have the hardware/patience to run it.
 
 <img src="image_to_video_wan_example.webp" width="512" />
 
