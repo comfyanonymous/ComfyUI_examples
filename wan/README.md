@@ -43,3 +43,7 @@ Note this example only generates 33 frames at 512x512 because I wanted it to be 
 [Workflow in Json format](image_to_video_wan_example.json)
 
 The input image can be found on the [flux](../flux) page.
+
+Here's the same example with the 720p model:
+
+<img src="image_to_video_wan_720p_example.webp" width="768" />
