@@ -1,0 +1,698 @@
+{
+  "last_node_id": 53,
+  "last_link_id": 109,
+  "nodes": [
+    {
+      "id": 8,
+      "type": "VAEDecode",
+      "pos": [
+        1210,
+        190
+      ],
+      "size": [
+        210,
+        46
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 35
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 76
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            56,
+            93
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 39,
+      "type": "VAELoader",
+      "pos": [
+        866.3932495117188,
+        499.18597412109375
+      ],
+      "size": [
+        306.36004638671875,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            76,
+            99
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "wan_2.1_vae.safetensors"
+      ]
+    },
+    {
+      "id": 28,
+      "type": "SaveAnimatedWEBP",
+      "pos": [
+        1460,
+        190
+      ],
+      "size": [
+        870.8511352539062,
+        643.7430419921875
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 56
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI",
+        16,
+        false,
+        90,
+        "default",
+        ""
+      ]
+    },
+    {
+      "id": 38,
+      "type": "CLIPLoader",
+      "pos": [
+        12.94982624053955,
+        184.6981658935547
+      ],
+      "size": [
+        390,
+        82
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            74,
+            75
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+        "wan",
+        "default"
+      ]
+    },
+    {
+      "id": 47,
+      "type": "SaveWEBM",
+      "pos": [
+        2367.213134765625,
+        193.6114959716797
+      ],
+      "size": [
+        315,
+        130
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 93
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveWEBM"
+      },
+      "widgets_values": [
+        "ComfyUI",
+        "vp9",
+        24,
+        32
+      ]
+    },
+    {
+      "id": 7,
+      "type": "CLIPTextEncode",
+      "pos": [
+        413,
+        389
+      ],
+      "size": [
+        425.27801513671875,
+        180.6060791015625
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 75
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            98
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Negative Prompt)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 37,
+      "type": "UNETLoader",
+      "pos": [
+        485.1220397949219,
+        57.094566345214844
+      ],
+      "size": [
+        346.7470703125,
+        82
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            92
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "wan2.1_i2v_480p_14B_bf16.safetensors",
+        "default"
+      ]
+    },
+    {
+      "id": 51,
+      "type": "CLIPVisionEncode",
+      "pos": [
+        340,
+        650
+      ],
+      "size": [
+        253.60000610351562,
+        78
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip_vision",
+          "type": "CLIP_VISION",
+          "link": 94
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 109
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP_VISION_OUTPUT",
+          "type": "CLIP_VISION_OUTPUT",
+          "links": [
+            107
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPVisionEncode"
+      },
+      "widgets_values": [
+        "none"
+      ]
+    },
+    {
+      "id": 49,
+      "type": "CLIPVisionLoader",
+      "pos": [
+        -20,
+        650
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP_VISION",
+          "type": "CLIP_VISION",
+          "links": [
+            94
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPVisionLoader"
+      },
+      "widgets_values": [
+        "clip_vision_h.safetensors"
+      ]
+    },
+    {
+      "id": 52,
+      "type": "LoadImage",
+      "pos": [
+        -30,
+        760
+      ],
+      "size": [
+        315,
+        314
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            106,
+            109
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "flux_dev_example.png",
+        "image"
+      ]
+    },
+    {
+      "id": 50,
+      "type": "WanImageToVideo",
+      "pos": [
+        673.0507202148438,
+        627.272705078125
+      ],
+      "size": [
+        342.5999755859375,
+        210
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 97
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 98
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 99
+        },
+        {
+          "name": "clip_vision_output",
+          "type": "CLIP_VISION_OUTPUT",
+          "shape": 7,
+          "link": 107
+        },
+        {
+          "name": "start_image",
+          "type": "IMAGE",
+          "shape": 7,
+          "link": 106
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            101
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            102
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            103
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "WanImageToVideo"
+      },
+      "widgets_values": [
+        512,
+        512,
+        33,
+        1
+      ]
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        415,
+        186
+      ],
+      "size": [
+        422.84503173828125,
+        164.31304931640625
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 74
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            97
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Positive Prompt)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "a cute anime girl with massive fennec ears and a big fluffy tail wearing a maid outfit turning around"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 3,
+      "type": "KSampler",
+      "pos": [
+        863,
+        187
+      ],
+      "size": [
+        315,
+        262
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 92
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 101
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 102
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 103
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            35
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        987948718394761,
+        "randomize",
+        20,
+        6,
+        "uni_pc",
+        "simple",
+        1
+      ]
+    }
+  ],
+  "links": [
+    [
+      35,
+      3,
+      0,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      56,
+      8,
+      0,
+      28,
+      0,
+      "IMAGE"
+    ],
+    [
+      74,
+      38,
+      0,
+      6,
+      0,
+      "CLIP"
+    ],
+    [
+      75,
+      38,
+      0,
+      7,
+      0,
+      "CLIP"
+    ],
+    [
+      76,
+      39,
+      0,
+      8,
+      1,
+      "VAE"
+    ],
+    [
+      92,
+      37,
+      0,
+      3,
+      0,
+      "MODEL"
+    ],
+    [
+      93,
+      8,
+      0,
+      47,
+      0,
+      "IMAGE"
+    ],
+    [
+      94,
+      49,
+      0,
+      51,
+      0,
+      "CLIP_VISION"
+    ],
+    [
+      97,
+      6,
+      0,
+      50,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      98,
+      7,
+      0,
+      50,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      99,
+      39,
+      0,
+      50,
+      2,
+      "VAE"
+    ],
+    [
+      101,
+      50,
+      0,
+      3,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      102,
+      50,
+      1,
+      3,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      103,
+      50,
+      2,
+      3,
+      3,
+      "LATENT"
+    ],
+    [
+      106,
+      52,
+      0,
+      50,
+      4,
+      "IMAGE"
+    ],
+    [
+      107,
+      51,
+      0,
+      50,
+      3,
+      "CLIP_VISION_OUTPUT"
+    ],
+    [
+      109,
+      52,
+      0,
+      51,
+      1,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1.015255979947749,
+      "offset": [
+        47.9156413692942,
+        -2.9216969634423267
+      ]
+    }
+  },
+  "version": 0.4
+}

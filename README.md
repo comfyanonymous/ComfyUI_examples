@@ -66,6 +66,8 @@ Here are some more advanced examples:
 
 [Nvidia Cosmos](cosmos)
 
+[Wan](wan)
+
 [Audio Models](audio)
 
 
