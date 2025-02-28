@@ -20,6 +20,7 @@ The diffusion models can be found [here](https://huggingface.co/Comfy-Org/Wan_2.
 
 These files go in: ComfyUI/models/diffusion_models/
 
+These examples use the 16 bit files but you can use the fp8 ones instead if you don't have enough memory.
 
 ## Workflows
 
