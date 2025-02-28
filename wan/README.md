@@ -25,7 +25,7 @@ These files go in: ComfyUI/models/diffusion_models/
 
 ### Text to Video
 
-This workflow requires the [wan2.1_t2v_1.3B_bf16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/blob/main/split_files/diffusion_models/wan2.1_t2v_1.3B_bf16.safetensors) file (put it in: ComfyUI/models/diffusion_models/). You can also use it with the 14B model.
+This workflow requires the [wan2.1_t2v_1.3B_fp16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/blob/main/split_files/diffusion_models/wan2.1_t2v_1.3B_fp16.safetensors) file (put it in: ComfyUI/models/diffusion_models/). You can also use it with the 14B model.
 
 ![Example](text_to_video_wan.webp)
 

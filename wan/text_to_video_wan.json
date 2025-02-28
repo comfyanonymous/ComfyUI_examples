@@ -1,6 +1,6 @@
 {
-  "last_node_id": 47,
-  "last_link_id": 93,
+  "last_node_id": 48,
+  "last_link_id": 95,
   "nodes": [
     {
       "id": 8,
@@ -14,7 +14,7 @@
         46
       ],
       "flags": {},
-      "order": 7,
+      "order": 8,
       "mode": 0,
       "inputs": [
         {
@@ -88,7 +88,7 @@
         643.7430419921875
       ],
       "flags": {},
-      "order": 8,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -107,47 +107,6 @@
         "default",
         ""
       ]
-    },
-    {
-      "id": 6,
-      "type": "CLIPTextEncode",
-      "pos": [
-        415,
-        186
-      ],
-      "size": [
-        422.84503173828125,
-        164.31304931640625
-      ],
-      "flags": {},
-      "order": 4,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 74
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            46
-          ],
-          "slot_index": 0
-        }
-      ],
-      "title": "CLIP Text Encode (Positive Prompt)",
-      "properties": {
-        "Node name for S&R": "CLIPTextEncode"
-      },
-      "widgets_values": [
-        "a fox moving quickly in a beautiful winter scenery nature trees sunset tracking camera"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
     },
     {
       "id": 7,
@@ -261,39 +220,6 @@
       ]
     },
     {
-      "id": 37,
-      "type": "UNETLoader",
-      "pos": [
-        485.1220397949219,
-        57.094566345214844
-      ],
-      "size": [
-        346.7470703125,
-        82
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            92
-          ],
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "UNETLoader"
-      },
-      "widgets_values": [
-        "wan2.1_t2v_1.3B_bf16.safetensors",
-        "default"
-      ]
-    },
-    {
       "id": 47,
       "type": "SaveWEBM",
       "pos": [
@@ -305,7 +231,7 @@
         130
       ],
       "flags": {},
-      "order": 9,
+      "order": 10,
       "mode": 4,
       "inputs": [
         {
@@ -337,13 +263,13 @@
         262
       ],
       "flags": {},
-      "order": 6,
+      "order": 7,
       "mode": 0,
       "inputs": [
         {
           "name": "model",
           "type": "MODEL",
-          "link": 92
+          "link": 95
         },
         {
           "name": "positive",
@@ -375,7 +301,7 @@
         "Node name for S&R": "KSampler"
       },
       "widgets_values": [
-        878361741413693,
+        82628696717253,
         "randomize",
         30,
         6,
@@ -383,6 +309,118 @@
         "simple",
         1
       ]
+    },
+    {
+      "id": 48,
+      "type": "ModelSamplingSD3",
+      "pos": [
+        440,
+        50
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 94
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            95
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelSamplingSD3"
+      },
+      "widgets_values": [
+        8
+      ]
+    },
+    {
+      "id": 37,
+      "type": "UNETLoader",
+      "pos": [
+        20,
+        40
+      ],
+      "size": [
+        346.7470703125,
+        82
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            94
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "wan2.1_t2v_1.3B_fp16.safetensors",
+        "default"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "CLIPTextEncode",
+      "pos": [
+        415,
+        186
+      ],
+      "size": [
+        422.84503173828125,
+        164.31304931640625
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 74
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            46
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "CLIP Text Encode (Positive Prompt)",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "a fox moving quickly in a beautiful winter scenery nature trees mountains daytime tracking camera"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
     }
   ],
   "links": [
@@ -451,30 +489,38 @@
       "LATENT"
     ],
     [
-      92,
-      37,
-      0,
-      3,
-      0,
-      "MODEL"
-    ],
-    [
       93,
       8,
       0,
       47,
       0,
       "IMAGE"
+    ],
+    [
+      94,
+      37,
+      0,
+      48,
+      0,
+      "MODEL"
+    ],
+    [
+      95,
+      48,
+      0,
+      3,
+      0,
+      "MODEL"
     ]
   ],
   "groups": [],
   "config": {},
   "extra": {
     "ds": {
-      "scale": 1.2284597357367726,
+      "scale": 1.1167815779425205,
       "offset": [
-        3.1164390661697974,
-        -1.2661621670411576
+        -5.675057867608515,
+        8.013751263058214
       ]
     }
   },
