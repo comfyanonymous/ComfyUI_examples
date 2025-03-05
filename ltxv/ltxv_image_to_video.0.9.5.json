@@ -1,6 +1,6 @@
 {
-  "last_node_id": 93,
-  "last_link_id": 230,
+  "last_node_id": 94,
+  "last_link_id": 234,
   "nodes": [
     {
       "id": 38,
@@ -100,128 +100,6 @@
       ],
       "color": "#322",
       "bgcolor": "#533"
-    },
-    {
-      "id": 69,
-      "type": "LTXVConditioning",
-      "pos": [
-        920,
-        60
-      ],
-      "size": [
-        223.8660125732422,
-        78
-      ],
-      "flags": {},
-      "order": 15,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 213
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 214
-        }
-      ],
-      "outputs": [
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "links": [
-            199
-          ],
-          "slot_index": 0
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "links": [
-            167
-          ],
-          "slot_index": 1
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "LTXVConditioning"
-      },
-      "widgets_values": [
-        25
-      ]
-    },
-    {
-      "id": 72,
-      "type": "SamplerCustom",
-      "pos": [
-        1201,
-        32
-      ],
-      "size": [
-        355.20001220703125,
-        230
-      ],
-      "flags": {},
-      "order": 16,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 181
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 199
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 167
-        },
-        {
-          "name": "sampler",
-          "type": "SAMPLER",
-          "link": 172
-        },
-        {
-          "name": "sigmas",
-          "type": "SIGMAS",
-          "link": 182
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 215
-        }
-      ],
-      "outputs": [
-        {
-          "name": "output",
-          "type": "LATENT",
-          "links": [
-            171
-          ],
-          "slot_index": 0
-        },
-        {
-          "name": "denoised_output",
-          "type": "LATENT",
-          "links": null
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "SamplerCustom"
-      },
-      "widgets_values": [
-        true,
-        397166166231987,
-        "randomize",
-        3
-      ]
     },
     {
       "id": 44,
@@ -726,7 +604,7 @@
       "id": 8,
       "type": "VAEDecode",
       "pos": [
-        1580,
+        1740,
         30
       ],
       "size": [
@@ -734,13 +612,13 @@
         46
       ],
       "flags": {},
-      "order": 17,
+      "order": 18,
       "mode": 0,
       "inputs": [
         {
           "name": "samples",
           "type": "LATENT",
-          "link": 171
+          "link": 232
         },
         {
           "name": "vae",
@@ -765,41 +643,10 @@
       "widgets_values": []
     },
     {
-      "id": 41,
-      "type": "SaveAnimatedWEBP",
-      "pos": [
-        1810,
-        30
-      ],
-      "size": [
-        493.98468017578125,
-        481.28692626953125
-      ],
-      "flags": {},
-      "order": 18,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 106
-        }
-      ],
-      "outputs": [],
-      "properties": {},
-      "widgets_values": [
-        "ComfyUI",
-        24,
-        false,
-        90,
-        "default"
-      ]
-    },
-    {
       "id": 86,
       "type": "SaveWEBM",
       "pos": [
-        2320,
+        2480,
         30
       ],
       "size": [
@@ -807,7 +654,7 @@
         130
       ],
       "flags": {},
-      "order": 19,
+      "order": 20,
       "mode": 4,
       "inputs": [
         {
@@ -849,6 +696,217 @@
       ],
       "color": "#432",
       "bgcolor": "#653"
+    },
+    {
+      "id": 41,
+      "type": "SaveAnimatedWEBP",
+      "pos": [
+        1970,
+        30
+      ],
+      "size": [
+        493.98468017578125,
+        481.28692626953125
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 106
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI",
+        24,
+        false,
+        90,
+        "default"
+      ]
+    },
+    {
+      "id": 72,
+      "type": "SamplerCustom",
+      "pos": [
+        1201,
+        32
+      ],
+      "size": [
+        355.20001220703125,
+        230
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 181
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 199
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 167
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 172
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 182
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 215
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            231
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SamplerCustom"
+      },
+      "widgets_values": [
+        true,
+        397166166231987,
+        "randomize",
+        3
+      ]
+    },
+    {
+      "id": 94,
+      "type": "LTXVCropGuides",
+      "pos": [
+        1552.4571533203125,
+        -99.19783020019531
+      ],
+      "size": [
+        216.59999084472656,
+        66
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 233
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 234
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "link": 231
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": null
+        },
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "links": [
+            232
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LTXVCropGuides"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 69,
+      "type": "LTXVConditioning",
+      "pos": [
+        920,
+        60
+      ],
+      "size": [
+        223.8660125732422,
+        78
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 213
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 214
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            199,
+            233
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            167,
+            234
+          ],
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LTXVConditioning"
+      },
+      "widgets_values": [
+        25
+      ]
     }
   ],
   "links": [
@@ -891,14 +949,6 @@
       72,
       2,
       "CONDITIONING"
-    ],
-    [
-      171,
-      72,
-      0,
-      8,
-      0,
-      "LATENT"
     ],
     [
       172,
@@ -1067,6 +1117,38 @@
       84,
       4,
       "IMAGE"
+    ],
+    [
+      231,
+      72,
+      0,
+      94,
+      2,
+      "LATENT"
+    ],
+    [
+      232,
+      94,
+      2,
+      8,
+      0,
+      "LATENT"
+    ],
+    [
+      233,
+      69,
+      0,
+      94,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      234,
+      69,
+      1,
+      94,
+      1,
+      "CONDITIONING"
     ]
   ],
   "groups": [],
