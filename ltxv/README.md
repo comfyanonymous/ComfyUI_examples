@@ -13,7 +13,14 @@ If you don't have it already downloaded you can download the [t5xxl_fp16.safeten
 Input image:
 <img src="fox.jpg" width="256" />
 
-Workflow:
+Simple img2vid workflow with start image only:
+
+![Example](ltxv_image_to_video_simple.0.9.5.webp)
+
+[Workflow in Json format](ltxv_image_to_video_simple.0.9.5.json)
+
+
+More complex img2vid workflow with multiple guiding images:
 
 ![Example](ltxv_image_to_video.0.9.5.webp)
 
