@@ -29,4 +29,4 @@ Download the [llava_llama3_vision.safetensors](https://huggingface.co/Comfy-Org/
 
 [Workflow in Json format](hunyuan_video_image_to_video.json)
 
-You can download this webp animated image and load it or drag it on [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the workflow.
+You can download this webp animated image and load it or drag it on [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the workflow. The input image can be found on the [flux](../flux) page.
