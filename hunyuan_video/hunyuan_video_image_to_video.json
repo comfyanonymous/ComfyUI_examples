@@ -1123,8 +1123,8 @@
       "directory": "text_encoders"
     },
     {
-      "name": "llava_llama3_fp16.safetensors",
-      "url": "https://huggingface.co/Comfy-Org/HunyuanVideo_repackaged/resolve/main/split_files/text_encoders/llava_llama3_fp16.safetensors?download=true",
+      "name": "llava_llama3_fp8_scaled.safetensors",
+      "url": "https://huggingface.co/Comfy-Org/HunyuanVideo_repackaged/resolve/main/split_files/text_encoders/llava_llama3_fp8_scaled.safetensors?download=true",
       "directory": "text_encoders"
     },
     {
