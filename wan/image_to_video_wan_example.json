@@ -539,7 +539,7 @@
         "Node name for S&R": "UNETLoader"
       },
       "widgets_values": [
-        "wan2.1_i2v_480p_14B_bf16.safetensors",
+        "wan2.1_i2v_480p_14B_fp16.safetensors",
         "default"
       ]
     },

@@ -17,6 +17,9 @@ You will first need:
 
 The diffusion models can be found [here](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/tree/main/split_files/diffusion_models)
 
+Note: The fp16 versions are recommended over the bf16 versions as they will give better results.
+
+Quality rank (highest to lowest): fp16 > bf16 > fp8_scaled > fp8_e4m3fn
 
 These files go in: ComfyUI/models/diffusion_models/
 
@@ -34,7 +37,7 @@ This workflow requires the [wan2.1_t2v_1.3B_fp16.safetensors](https://huggingfac
 
 ### Image to Video
 
-This workflow requires the [wan2.1_i2v_480p_14B_bf16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/blob/main/split_files/diffusion_models/wan2.1_i2v_480p_14B_bf16.safetensors) file (put it in: ComfyUI/models/diffusion_models/) and 
+This workflow requires the [wan2.1_i2v_480p_14B_fp16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/blob/main/split_files/diffusion_models/wan2.1_i2v_480p_14B_fp16.safetensors) file (put it in: ComfyUI/models/diffusion_models/) and 
 [clip_vision_h.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/blob/main/split_files/clip_vision/clip_vision_h.safetensors) which goes in: ComfyUI/models/clip_vision/
 
 Note this example only generates 33 frames at 512x512 because I wanted it to be accessible, the model can do more than that. The 720p model is pretty good if you have the hardware/patience to run it.
@@ -45,6 +48,6 @@ Note this example only generates 33 frames at 512x512 because I wanted it to be 
 
 The input image can be found on the [flux](../flux) page.
 
-Here's the same example with the 720p model:
+Here's the same example with the [720p](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/blob/main/split_files/diffusion_models/wan2.1_i2v_720p_14B_fp16.safetensors) model:
 
 <img src="image_to_video_wan_720p_example.webp" width="768" />
