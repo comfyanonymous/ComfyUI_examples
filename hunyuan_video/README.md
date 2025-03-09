@@ -21,12 +21,30 @@ You can download this webp animated image and load it or drag it on [ComfyUI](ht
 
 ### Image to Video
 
-Download the [hunyuan_video_image_to_video_720p_bf16.safetensors](https://huggingface.co/Comfy-Org/HunyuanVideo_repackaged/tree/main/split_files/diffusion_models) file and put it in your ComfyUI/models/diffusion_models/ folder.
-
 Download the [llava_llama3_vision.safetensors](https://huggingface.co/Comfy-Org/HunyuanVideo_repackaged/blob/main/split_files/clip_vision/llava_llama3_vision.safetensors) file and put it in your ComfyUI/models/clip_vision/ folder.
+
+There are two different models you can choose from which give different results.
+
+#### v1 "concat"
+
+This first model follows the guiding image less than the other one but might give better movement.
+
+Download the [hunyuan_video_image_to_video_720p_bf16.safetensors](https://huggingface.co/Comfy-Org/HunyuanVideo_repackaged/tree/main/split_files/diffusion_models) file and put it in your ComfyUI/models/diffusion_models/ folder.
 
 ![Example](hunyuan_video_image_to_video.webp)
 
 [Workflow in Json format](hunyuan_video_image_to_video.json)
+
+You can download this webp animated image and load it or drag it on [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the workflow. The input image can be found on the [flux](../flux) page.
+
+#### v2 "replace"
+
+This second model follows the guiding image very closely but seems to be a bit less dynamic than the first one.
+
+Download the [hunyuan_video_v2_replace_image_to_video_720p_bf16.safetensors](https://huggingface.co/Comfy-Org/HunyuanVideo_repackaged/tree/main/split_files/diffusion_models) file and put it in your ComfyUI/models/diffusion_models/ folder.
+
+![Example](hunyuan_video_image_to_video_v2.webp)
+
+[Workflow in Json format](hunyuan_video_image_to_video_v2.json)
 
 You can download this webp animated image and load it or drag it on [ComfyUI](https://github.com/comfyanonymous/ComfyUI) to get the workflow. The input image can be found on the [flux](../flux) page.
