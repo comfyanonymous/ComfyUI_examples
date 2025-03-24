@@ -70,6 +70,7 @@ Here are some more advanced examples:
 
 [Audio Models](audio)
 
+[Hunyuan3D 2.0](https://docs.comfy.org/tutorials/3d/hunyuan3D-2)
 
 ## Documentation
 
