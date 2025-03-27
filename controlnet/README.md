@@ -4,7 +4,7 @@ Note that in these examples the raw image is passed directly to the ControlNet/T
 
 Each ControlNet/T2I adapter needs the image that is passed to it to be in a specific format like depthmaps, canny maps and so on depending on the specific model if you want good results.
 
-The ControlNetApply node will not convert regular images into depthmaps, canny maps and so on for you. You will have to do that separately or using nodes to preprocess your images that you can find: [Here](https://github.com/Fannovel16/comfy_controlnet_preprocessors)
+The ControlNetApply node will not convert regular images into depthmaps, canny maps and so on for you. You will have to do that separately or using nodes to preprocess your images that you can find: [Here](https://github.com/Fannovel16/comfyui_controlnet_aux)
 
 You can find the latest controlnet model files here: [Original version](https://huggingface.co/lllyasviel/ControlNet-v1-1/tree/main) or [smaller fp16 safetensors version](https://huggingface.co/comfyanonymous/ControlNet-v1-1_fp16_safetensors/tree/main)
 
