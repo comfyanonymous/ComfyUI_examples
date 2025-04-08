@@ -95,6 +95,8 @@ Here is an example for the full canny model:
 
 ![Example](flux_canny_model_example.png)
 
+#### Canny and Depth Lora Format
+
 They are also published in lora format that can be applied to the flux dev model: [flux1-canny-dev-lora.safetensors](https://huggingface.co/black-forest-labs/FLUX.1-Canny-dev-lora) and [flux1-depth-dev-lora.safetensors](https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev-lora), put them in your ComfyUI/models/loras/ folder
 
 Here is an example for the depth lora.
