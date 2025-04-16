@@ -52,6 +52,8 @@ Here are some more advanced examples:
 
 [Lumina Image 2.0](lumina2)
 
+[HiDream](hidream)
+
 [Flux](flux)
 
 [Edit/InstructPix2Pix Models](edit_models)
