@@ -26,3 +26,12 @@ Download [hidream_i1_dev_bf16.safetensors](https://huggingface.co/Comfy-Org/HiDr
 You can then load up or drag the following image in ComfyUI to get the workflow:
 
 ![Example](hidream_dev_example.png)
+
+## HiDream full Workflow
+
+Download [hidream_i1_full_fp16.safetensors](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/blob/main/split_files/diffusion_models/hidream_i1_full_fp16.safetensors) and put it in your ComfyUI/models/diffusion_models/ directory.
+
+You can then load up or drag the following image in ComfyUI to get the workflow:
+
+![Example](hidream_full_example.png)
+
