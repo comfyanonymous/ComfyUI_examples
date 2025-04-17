@@ -52,6 +52,16 @@ You can then load or drag the following image in ComfyUI to get the workflow:
 
 ![Example](flux_dev_checkpoint_example.png)
 
+
+#### OptimalSteps for accelerating
+
+You can use the "OptimalStepsScheduler" to get a satisfactory result with much less inference time. (Now only support for Flux Dev fp16). More details can be found in [OptimalSteps](https://github.com/bebebe666/OptimalSteps). Here is a demo for 10 steps result:
+
+![Example](flux_dev_OptimalSteps.png)
+
+[Workflow in Json format](flux_dev_OptimalSteps.json)
+
+
 ### Flux Schnell
 
 For Flux schnell you can get the checkpoint [here](https://huggingface.co/Comfy-Org/flux1-schnell/blob/main/flux1-schnell-fp8.safetensors) that you can put in your: ComfyUI/models/checkpoints/ directory.

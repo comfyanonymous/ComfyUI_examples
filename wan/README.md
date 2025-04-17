@@ -35,6 +35,15 @@ This workflow requires the [wan2.1_t2v_1.3B_fp16.safetensors](https://huggingfac
 
 [Workflow in Json format](text_to_video_wan.json)
 
+#### OptimalSteps for accelerating
+
+You can use the "OptimalStepsScheduler" to get a satisfactory result with much less inference time. (Now only support for Wan14B). More details can be found in [OptimalSteps](https://github.com/bebebe666/OptimalSteps). Here is a demo for 20 steps result:
+
+![Example](text_to_video_wan_OptimalSteps.webp)
+
+[Workflow in Json format](text_to_video_wan_OptimalSteps.json)
+
+
 ### Image to Video
 
 This workflow requires the [wan2.1_i2v_480p_14B_fp16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/blob/main/split_files/diffusion_models/wan2.1_i2v_480p_14B_fp16.safetensors) file (put it in: ComfyUI/models/diffusion_models/) and 
