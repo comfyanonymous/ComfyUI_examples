@@ -35,3 +35,11 @@ You can then load up or drag the following image in ComfyUI to get the workflow:
 
 ![Example](hidream_full_example.png)
 
+
+## HiDream e1
+
+This is an experimental edit model, download [hidream_e1_full_bf16.safetensors](https://huggingface.co/Comfy-Org/HiDream-I1_ComfyUI/blob/main/split_files/diffusion_models/hidream_e1_full_bf16.safetensors) and put it in your ComfyUI/models/diffusion_models/ directory.
+
+You can then load up or drag the following image in ComfyUI to get the workflow:
+
+![Example](hidream_e1_example.png)
