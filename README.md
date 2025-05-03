@@ -50,6 +50,8 @@ Here are some more advanced examples:
 
 [HunyuanDiT](hunyuan_dit)
 
+[Chroma](chroma)
+
 [Lumina Image 2.0](lumina2)
 
 [HiDream](hidream)
