@@ -1,50 +1,68 @@
-# Nvidia Cosmos Models
+# 🌌 Nvidia Cosmos Models for ComfyUI
 
-[Nvidia Cosmos](https://www.nvidia.com/en-us/ai/cosmos/) is a family of "World Models". ComfyUI currently supports specifically the 7B and 14B text to video diffusion models and the 7B and 14B image to video diffusion models.
+[Nvidia Cosmos](https://www.nvidia.com/en-us/ai/cosmos/) is a powerful family of **"World Models"** for text-to-video and image-to-video generation.  
+ComfyUI currently supports the **7B** and **14B** Cosmos models for both **Text2Video** and **Image2Video** diffusion workflows.
 
-## Files to Download
+---
 
-You will first need:
+## 📦 Required Files & Setup
 
-#### Text encoder and VAE:
+### 🧠 Text Encoder & VAE
 
-[oldt5_xxl_fp8_e4m3fn_scaled.safetensors](https://huggingface.co/comfyanonymous/cosmos_1.0_text_encoder_and_VAE_ComfyUI/tree/main/text_encoders) goes in: ComfyUI/models/text_encoders/
+Download the following files and place them in the specified directories:
 
-[cosmos_cv8x8x8_1.0.safetensors](https://huggingface.co/comfyanonymous/cosmos_1.0_text_encoder_and_VAE_ComfyUI/blob/main/vae/cosmos_cv8x8x8_1.0.safetensors) goes in: ComfyUI/models/vae/
+| File | Destination Folder |
+|------|---------------------|
+| [`oldt5_xxl_fp8_e4m3fn_scaled.safetensors`](https://huggingface.co/comfyanonymous/cosmos_1.0_text_encoder_and_VAE_ComfyUI/tree/main/text_encoders) | `ComfyUI/models/text_encoders/` |
+| [`cosmos_cv8x8x8_1.0.safetensors`](https://huggingface.co/comfyanonymous/cosmos_1.0_text_encoder_and_VAE_ComfyUI/blob/main/vae/cosmos_cv8x8x8_1.0.safetensors) | `ComfyUI/models/vae/` |
 
-Note: oldt5_xxl is not the same as the t5xxl used in flux and other models. 
-oldt5_xxl is t5xxl 1.0 while the one used in flux and others is t5xxl 1.1
+> ⚠️ `oldt5_xxl` is **not** the same as `t5xxl` used in models like Flux.  
+> `oldt5_xxl` = T5XXL **1.0**, while Flux uses **1.1**.
 
-#### Video Models
+---
 
-The video models can be found [in safetensors format here.](https://huggingface.co/mcmonkey/cosmos-1.0/tree/main)
+### 🎥 Video Diffusion Models
 
-The workflows on this page use [Cosmos-1_0-Diffusion-7B-Text2World.safetensors](https://huggingface.co/mcmonkey/cosmos-1.0/blob/main/Cosmos-1_0-Diffusion-7B-Text2World.safetensors) and [Cosmos-1_0-Diffusion-7B-Video2World.safetensors](https://huggingface.co/mcmonkey/cosmos-1.0/blob/main/Cosmos-1_0-Diffusion-7B-Video2World.safetensors)
+All `.safetensors` models go into:  
+`ComfyUI/models/diffusion_models/`
 
-These files go in: ComfyUI/models/diffusion_models
+| Model | Download |
+|-------|----------|
+| Cosmos 7B - Text to Video | [Cosmos-1_0-Diffusion-7B-Text2World.safetensors](https://huggingface.co/mcmonkey/cosmos-1.0/blob/main/Cosmos-1_0-Diffusion-7B-Text2World.safetensors) |
+| Cosmos 7B - Image/Video to Video | [Cosmos-1_0-Diffusion-7B-Video2World.safetensors](https://huggingface.co/mcmonkey/cosmos-1.0/blob/main/Cosmos-1_0-Diffusion-7B-Video2World.safetensors) |
 
-Note: "Text to World" means Text to video and "Video to World" means image/video to video.
+> 💡 “Text to World” = **Text ➜ Video**  
+> “Video to World” = **Image/Video ➜ Video**
 
-If you want the original diffusion models in .pt format instead of the repacked safetensors the official links are: [7B-Text2World](https://huggingface.co/nvidia/Cosmos-1.0-Diffusion-7B-Text2World) [7B-Video2World](https://huggingface.co/nvidia/Cosmos-1.0-Diffusion-7B-Video2World) [14B-Text2World](https://huggingface.co/nvidia/Cosmos-1.0-Diffusion-14B-Text2World) [14B-Video2World](https://huggingface.co/nvidia/Cosmos-1.0-Diffusion-14B-Video2World)
+#### 🔁 Optional: Original `.pt` Versions
 
-## Workflows
+- [7B - Text2World (.pt)](https://huggingface.co/nvidia/Cosmos-1.0-Diffusion-7B-Text2World)  
+- [7B - Video2World (.pt)](https://huggingface.co/nvidia/Cosmos-1.0-Diffusion-7B-Video2World)  
+- [14B - Text2World (.pt)](https://huggingface.co/nvidia/Cosmos-1.0-Diffusion-14B-Text2World)  
+- [14B - Video2World (.pt)](https://huggingface.co/nvidia/Cosmos-1.0-Diffusion-14B-Video2World)
 
-### Text to Video
+---
 
-This workflow requires the 7B text to video model that you can download above.
+## 🧪 Example Workflows
 
-![Example](text_to_video_cosmos_7B.webp)
+### 📝 Text ➜ Video (7B)
 
-[Workflow in Json format](text_to_video_cosmos_7B.json)
+Generate dynamic video scenes straight from your prompts.
 
-### Image to Video
+![Text to Video Example](text_to_video_cosmos_7B.webp)  
+📄 [Download JSON Workflow](text_to_video_cosmos_7B.json)
 
-This model supports generating a video from 1 or more images. If more than one image is fed it will use them all as a guide and continue the motion. You can also do basic interpolation by setting one or more start_image and end_image which works best if those images are similar to each other.
+---
 
-This workflow requires the 7B image to video model that you can download above.
+### 🖼️ Image(s) ➜ Video (7B)
 
-This model is trained primarily on realistic videos but in this example you can see that it also works decently on anime.
+- Feed in one or multiple images.
+- Smoothly **interpolates motion** if `start_image` and `end_image` are similar.
+- Trained on realistic video data, but also handles **anime** fairly well!
 
-![Example](image_to_video_cosmos_7B.webp)
+![Image to Video Example](image_to_video_cosmos_7B.webp)  
+📄 [Download JSON Workflow](image_to_video_cosmos_7B.json)
 
-[Workflow in Json format](image_to_video_cosmos_7B.json)
+---
+
+✨ With the power of Cosmos + ComfyUI, you're not just prompting—you're animating entire **worlds**.
