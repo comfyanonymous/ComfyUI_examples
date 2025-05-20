@@ -51,3 +51,17 @@ The input image can be found on the [flux](../flux) page.
 Here's the same example with the [720p](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/blob/main/split_files/diffusion_models/wan2.1_i2v_720p_14B_fp16.safetensors) model:
 
 <img src="image_to_video_wan_720p_example.webp" width="768" />
+
+
+### VACE reference Image to Video
+
+This workflow requires the [wan2.1_vace_14B_fp16.safetensors](https://huggingface.co/Comfy-Org/Wan_2.1_ComfyUI_repackaged/blob/main/split_files/diffusion_models/wan2.1_vace_14B_fp16.safetensors) file (put it in: ComfyUI/models/diffusion_models/)
+
+This example generates a video from a reference image, this is different from generating a video from a start image. You'll notice that the video does not actually contain the reference image but is clearly derived from it.
+
+<img src="vace_reference_to_video.webp" width="768" />
+
+[Workflow in Json format](vace_reference_to_video.json)
+
+You can find the input image [here](../chroma/fennec_girl_sing.png) that image contains a [Chroma](../chroma) workflow if you are interested how it was generated.
+
