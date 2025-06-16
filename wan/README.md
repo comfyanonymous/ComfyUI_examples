@@ -2,6 +2,10 @@
 
 [Wan 2.1](https://github.com/Wan-Video/Wan2.1) is a family of video models.
 
+## Update ComfyUI
+
+Update ComfyUI to the latest version. Or, download the ComfyUI App. 
+
 ## Files to Download
 
 You will first need:
