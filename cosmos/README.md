@@ -1,4 +1,6 @@
-# Nvidia Cosmos Models
+# Original Nvidia Cosmos Models
+
+For the newer Cosmos models see [Cosmos Predict2](../cosmos_predict2)
 
 [Nvidia Cosmos](https://www.nvidia.com/en-us/ai/cosmos/) is a family of "World Models". ComfyUI currently supports specifically the 7B and 14B text to video diffusion models and the 7B and 14B image to video diffusion models.
 

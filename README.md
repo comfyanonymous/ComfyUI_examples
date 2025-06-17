@@ -70,6 +70,8 @@ Here are some more advanced examples:
 
 [Nvidia Cosmos](cosmos)
 
+[Nvidia Cosmos Predict2](cosmos_predict2)
+
 [Wan](wan)
 
 [Audio Models](audio)
