@@ -60,6 +60,8 @@ Here are some more advanced examples:
 
 [Edit/InstructPix2Pix Models](edit_models)
 
+[Omnigen2](omnigen)
+
 [Stable Video Diffusion](video)
 
 [Mochi](mochi)
