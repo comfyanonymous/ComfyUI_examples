@@ -64,6 +64,20 @@ You can then load or drag the following image in ComfyUI to get the workflow:
 
 The following examples might require that you have some of the regular flux files that you can find links to at the top of this page.
 
+### Flux Kontext (image editing) model
+
+Download the [flux1-kontext-dev.safetensors](https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev) model file and put it in your ComfyUI/models/diffusion_models/ folder. There is an alternative fp8 model here: [flux1-dev-kontext_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/flux1-kontext-dev_ComfyUI/blob/main/split_files/diffusion_models/flux1-dev-kontext_fp8_scaled.safetensors) if the other one is too large for you.
+
+Here's a simple example.
+
+![Example](flux_kontext_example.png)
+
+You can find the input image [here](../chroma/fennec_girl_sing.png)
+
+Here's another more complex example that generates a comic from the above input image:
+
+![Example](flux_kontext_example_comic.webp)
+
 ### Fill (Inpainting) model
 
 Download the [flux1-fill-dev.safetensors](https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev) model file and put it in your ComfyUI/models/diffusion_models/ folder.
