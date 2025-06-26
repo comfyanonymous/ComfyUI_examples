@@ -68,9 +68,10 @@ The following examples might require that you have some of the regular flux file
 
 Download the [flux1-kontext-dev.safetensors](https://huggingface.co/black-forest-labs/FLUX.1-Kontext-dev) model file and put it in your ComfyUI/models/diffusion_models/ folder. There is an alternative fp8 model here: [flux1-dev-kontext_fp8_scaled.safetensors](https://huggingface.co/Comfy-Org/flux1-kontext-dev_ComfyUI/blob/main/split_files/diffusion_models/flux1-dev-kontext_fp8_scaled.safetensors) if the other one is too large for you.
 
-Here's a simple example.
+Here's a simple example. You can load or drag the following image in ComfyUI to get the workflow:
 
 ![Example](flux_kontext_example.png)
+
 
 You can find the input image [here](../chroma/fennec_girl_sing.png)
 
