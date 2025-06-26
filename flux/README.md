@@ -73,7 +73,7 @@ Here's a simple example. You can load or drag the following image in ComfyUI to 
 ![Example](flux_kontext_example.png)
 
 
-You can find the input image [here](../chroma/fennec_girl_sing.png)
+You can find the input image for the above workflow [here](../chroma/fennec_girl_sing.png)
 
 Here's another more complex example that generates a comic from the above input image:
 
