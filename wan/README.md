@@ -2,6 +2,8 @@
 
 [Wan 2.1](https://github.com/Wan-Video/Wan2.1) is a family of video models.
 
+For Wan 2.2 see: [Wan 2.2](../wan22)
+
 ## Files to Download
 
 You will first need:

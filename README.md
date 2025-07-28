@@ -74,7 +74,9 @@ Here are some more advanced examples:
 
 [Nvidia Cosmos Predict2](cosmos_predict2)
 
-[Wan](wan)
+[Wan 2.1](wan)
+
+[Wan 2.2](wan22)
 
 [Audio Models](audio)
 
