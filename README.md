@@ -56,6 +56,8 @@ Here are some more advanced examples:
 
 [HiDream](hidream)
 
+[Qwen Image](qwen_image)
+
 [Flux](flux)
 
 [Edit/InstructPix2Pix Models](edit_models)
