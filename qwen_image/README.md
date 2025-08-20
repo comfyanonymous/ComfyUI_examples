@@ -14,3 +14,15 @@ You can then load up or drag the following image in ComfyUI to get the workflow:
 
 ![Example](qwen_image_basic_example.png)
 
+## Edit Model
+
+Make sure you downloaded the text encoder and vae files for the basic workflow above.
+
+Download [qwen_image_edit_fp8_e4m3fn.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/blob/main/split_files/diffusion_models/qwen_image_edit_fp8_e4m3fn.safetensors) and put it in your ComfyUI/models/diffusion_models directory.
+
+
+You can then load up or drag the following image in ComfyUI to get the workflow:
+
+![Example](qwen_image_edit_basic_example.png)
+
+You can find the input image [here](../chroma/fennec_girl_sing.png)
