@@ -1,0 +1,434 @@
+{
+  "id": "fc36ea66-77e8-43db-8502-fa492f7afe4b",
+  "revision": 0,
+  "last_node_id": 21,
+  "last_link_id": 26,
+  "nodes": [
+    {
+      "id": 17,
+      "type": "VAEEncode",
+      "pos": [
+        623.264404296875,
+        492.7901916503906
+      ],
+      "size": [
+        140,
+        46
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "pixels",
+          "type": "IMAGE",
+          "link": 20
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            21
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEEncode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 13,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -73.47149658203125,
+        126.80302429199219
+      ],
+      "size": [
+        270,
+        98
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            22
+          ]
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            15,
+            16
+          ]
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            19,
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "v1-5-pruned-emaonly-fp16.safetensors"
+      ]
+    },
+    {
+      "id": 16,
+      "type": "KSampler",
+      "pos": [
+        815.7514038085938,
+        -39.92001724243164
+      ],
+      "size": [
+        270,
+        262
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 22
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 17
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 18
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 21
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            24
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        881719264574257,
+        "randomize",
+        20,
+        8,
+        "euler",
+        "simple",
+        1
+      ]
+    },
+    {
+      "id": 20,
+      "type": "VAEDecode",
+      "pos": [
+        1138.6329345703125,
+        -39.92001724243164
+      ],
+      "size": [
+        140,
+        46
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 24
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 25
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            26
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 18,
+      "type": "LoadImage",
+      "pos": [
+        317.6572265625,
+        527.173095703125
+      ],
+      "size": [
+        274.080078125,
+        314.0000305175781
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            20
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "example.png",
+        "image"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "CLIPTextEncode",
+      "pos": [
+        317.6572265625,
+        -39.92001724243164
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            17
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "Photograph of victorian woman with wings, ske clouds, meadow grass"
+      ]
+    },
+    {
+      "id": 15,
+      "type": "CLIPTextEncode",
+      "pos": [
+        317.6572265625,
+        238.09872436523438
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 16
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "watermark, text"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "SaveImage",
+      "pos": [
+        1410.430908203125,
+        -33.380863189697266
+      ],
+      "size": [
+        270,
+        270
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 26
+        }
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI"
+      ]
+    }
+  ],
+  "links": [
+    [
+      15,
+      13,
+      1,
+      14,
+      0,
+      "CLIP"
+    ],
+    [
+      16,
+      13,
+      1,
+      15,
+      0,
+      "CLIP"
+    ],
+    [
+      17,
+      14,
+      0,
+      16,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      18,
+      15,
+      0,
+      16,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      19,
+      13,
+      2,
+      17,
+      1,
+      "VAE"
+    ],
+    [
+      20,
+      18,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ],
+    [
+      21,
+      17,
+      0,
+      16,
+      3,
+      "LATENT"
+    ],
+    [
+      22,
+      13,
+      0,
+      16,
+      0,
+      "MODEL"
+    ],
+    [
+      24,
+      16,
+      0,
+      20,
+      0,
+      "LATENT"
+    ],
+    [
+      25,
+      13,
+      2,
+      20,
+      1,
+      "VAE"
+    ],
+    [
+      26,
+      20,
+      0,
+      21,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7646251029936842,
+      "offset": [
+        647.8309012493487,
+        348.91223128409877
+      ]
+    },
+    "frontendVersion": "1.23.4"
+  },
+  "version": 0.4
+}
