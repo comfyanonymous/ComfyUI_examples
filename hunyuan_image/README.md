@@ -1,4 +1,4 @@
-# Hunyuan Image 2,`
+# Hunyuan Image 2,1
 
 [Hunyuan Image 2.1](https://huggingface.co/tencent/HunyuanImage-2.1) is a powerful diffusion model for image generation.
 
