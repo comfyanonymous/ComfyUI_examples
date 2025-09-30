@@ -14,7 +14,21 @@ You can then load up or drag the following image in ComfyUI to get the workflow:
 
 ![Example](qwen_image_basic_example.png)
 
-## Edit Model
+## Edit Model v2509
+
+Make sure you downloaded the text encoder and vae files for the basic workflow above. This model supports up to 3 different image inputs.
+
+Download [qwen_image_edit_2509_fp8_e4m3fn.safetensors](https://huggingface.co/Comfy-Org/Qwen-Image-Edit_ComfyUI/blob/main/split_files/diffusion_models/qwen_image_edit_2509_fp8_e4m3fn.safetensors) and put it in your ComfyUI/models/diffusion_models directory.
+
+
+You can then load up or drag the following image in ComfyUI to get the workflow:
+
+![Example](qwen_image_edit_2509_basic_example.png)
+
+You can find the input image [here](../chroma/fennec_girl_sing.png)
+
+
+## Edit Model (older first version)
 
 Make sure you downloaded the text encoder and vae files for the basic workflow above.
 
