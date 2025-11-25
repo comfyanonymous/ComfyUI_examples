@@ -62,6 +62,8 @@ Here are some more advanced examples:
 
 [Flux](flux)
 
+[Flux 2](flux2)
+
 [Edit/InstructPix2Pix Models](edit_models)
 
 [Omnigen2](omnigen)
