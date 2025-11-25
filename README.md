@@ -92,8 +92,6 @@ Here are some more advanced examples:
 
 #### [WIP Documentation](https://docs.comfy.org/)
 
-#### [WIP LLM Assisted Documentation](https://docs.getsalt.ai/md/) of every node
-
 The old [Node Guide (WIP)](https://blenderneko.github.io/ComfyUI-docs/) documents what most nodes do.
 
 You might also want to check out the: [Frequently Asked Questions](faq)
