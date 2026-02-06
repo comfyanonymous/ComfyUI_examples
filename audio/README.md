@@ -5,7 +5,7 @@
 Download the [ace_step_v1_3.5b.safetensors](https://huggingface.co/Comfy-Org/ACE-Step_ComfyUI_repackaged/blob/main/all_in_one/ace_step_v1_3.5b.safetensors) and save it to your ComfyUI/models/checkpoints/ directory.
 
 
-he following flac audio file contains a workflow, you can download it and load it or drag it on the ComfyUI interface
+The following flac audio file contains a workflow, you can download it and load it or drag it on the ComfyUI interface
 
 <audio controls="1" src="ace_step_example.flac">Your browser does not support the audio tag.</audio>
 
